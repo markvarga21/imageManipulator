@@ -16,7 +16,7 @@
 * Egy piaci rés betöltésére ad lehetőséget az alkalmazás, hiszen ez nem egy bonyolultan kezelhető sok ezer dolláros szoftver lenne amit telepíteni kell, hanem egy ingyenes, könnyen használható weboldal lenne.
 ---
 ## 3. Vágyálom rendszer leírása
-
+* Az alkalmazásnak tudni kell futnia a weben, amit bárhonnan el tudnak érni probélma nélkül, ezáltal lehetőséget adva arra, hogy bárhol a világon tudjuk egyből fényképezés után, a képet feltöltve azt szerkeszteni és manipulálni.
 ---
 ## 4. Funkcionális követelmények
 
