@@ -1,6 +1,7 @@
 # **Funkcionális specifikáció**
 ## 1. A rendszer céljai és nem céljai
-
+* Manapság a képek szerepe rendkívül fontos, hiszen minden emlékünket megörökítünk, hogy azt majd később vissza tudjuk nézni.
+    * Ezzel az a probléma, hogy nem mindenki rendelkezik drága felszereléssel, kamerával, nem is tanult fényképésznek és még sorholhatnám. Ebből kifolyólag, nem minden kép lesz olyan jó minőségű, mint amilyet szeretnénk.
 ---
 ## 2. Jelenlegi helyzet leírása
 
