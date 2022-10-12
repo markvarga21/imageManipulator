@@ -11,7 +11,9 @@
     * Szöveget kinyerni egy adott képből, azt pedig opcionálisan átalakítani különböző dokumentumokba (pdf, doc, docx stb.)
 ---
 ## 2. Jelenlegi helyzet leírása
-
+* Az iparban a legtöbb szoftver beszerzése, amely képes képek szerkesztésére, és azokra amik fentebb le lettek írva, nagyon költséges, amit nem minden, sőt, a mai árakat figyelembe véve, nem mindenki tud megengedni magának.
+* Itt jönne képbe az alkalmazásunk, ami ingyenes lenne, és egyelen webes alkalmazásba foglalná az összes fent említett funkcionalitást.
+* Egy piaci rés betöltésére ad lehetőséget az alkalmazás, hiszen ez nem egy bonyolultan kezelhető sok ezer dolláros szoftver lenne amit telepíteni kell, hanem egy ingyenes, könnyen használható weboldal lenne.
 ---
 ## 3. Vágyálom rendszer leírása
 
