@@ -67,3 +67,5 @@
 
 ---
 ## 13. Fogalomszótár
+1. Egy preset, az amikor a felhasználó beállítja a különböző képszerkesztési beállításokat, s azokat lementi, hogy később is be tudja majd tölteni és felhasználni őket.
+2. Ezek különböző elektronikus szöveges dokumentum formátumok, a PDF-et hivatalos dokumentumok továbbítására szokták használni, mivel alapvetően nem szerkeszthető. A DOC illetve DOCX pedig a Microsoft Word szöveges dokumentumainak a formátumai. 
