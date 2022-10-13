@@ -50,6 +50,12 @@
     * Tilos tárolnia a felhasználó képeit, hiszen az a GDPR bizonyos szabályaival szembe menne.
 ---
 ## 5. Jelenlegi üzleti folyamatok modellje
+* Telepített képszerkesztő használata:
+    * A legtöbb képszerkesztőt lekell tölteni és telepíteni
+    * A legtöbb fizetős és dárga
+    * A legtöbbet egy ideig lehet használni utána fizetni kell
+    * Nem átlátható így a felhasználónak a legtöbb idejét az veszi el hogy az alkalmazás kikell ismernie
+    * Illetve ha a felhasználónak nincs erős gépe akár le is fagyhat az alkalmazás ami az addigi változtatások kárára mehet
 
 ---
 ## 6. Igényelt üzleti folyamatok modellje
