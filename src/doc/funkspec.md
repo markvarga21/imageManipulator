@@ -19,7 +19,14 @@
         * Az alkalmazásunk az egyszerűségre és gyorsaságra törekszik.
 ---
 ## 2. Jelenlegi helyzet leírása
-
+* A megrendelő szeretné, ha a képszerkesztés minél gyorsabb, egyszerűbb és innovatívabb lenne.
+* A megrendelő szeretné ha mindez ingyenes lenne és egy mindenki számára elérhető weboldalon meg lehetne tekinteni és használni.
+    * A weboldal neve legyen egyszerű és jól csengő, hogy mindenki könnyen meg tudja jegyezni.
+* Azt szorgalmazza, hogy legyenek külön felületek az egymástól elkülöníthető funkcionalitásokra:
+    * Pl. magára a képszerkesztésre egy, a háttér eltávolítására egy illetve külön oldal/fül a szöveg kinyerésére, illetve annak exportálására.
+* A felhasználó le tudja tölteni az általa szerkesztett képet.
+* A felhasználó le tudja tölteni a konvertált dokumentumot ami az általa feltöltött képből kinyert szöveget tartalmazza.
+* Továbbá, az alkalmazás egy piaci rés betöltésére lenne alkalmas
 ---
 ## 3. Vágyálom rendszer leírása
 
