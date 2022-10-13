@@ -65,7 +65,12 @@
 
 ---
 ## 10. Képernyő tervek
-
+* Az alkalmazás három felületet fog tartalmazni<sup>3</sup>, amik egyetlen oldalon lesznek megvalósítva, és onnan lehet váltogatni majd az oldalsó fülek segítségével, mint azt a lenti képen láthatjuk is.
+    * A jelenlegi, amin van az a képszerkesztésre van
+    * A második az a szöveg kinyerésre
+    * A harmadik pedig a háttér eltávolításra való felületet hozza be ha rákattintunk
+* Az alkalmazás kezdőoldala:
+![Home page](../resources/homePage.png)
 ---
 ## 11. Forgatókönyvek
 
@@ -76,3 +81,4 @@
 ## 13. Fogalomszótár
 1. Egy preset, az amikor a felhasználó beállítja a különböző képszerkesztési beállításokat, s azokat lementi, hogy később is be tudja majd tölteni és felhasználni őket.
 2. Ezek különböző elektronikus szöveges dokumentum formátumok, a PDF-et hivatalos dokumentumok továbbítására szokták használni, mivel alapvetően nem szerkeszthető. A DOC illetve DOCX pedig a Microsoft Word szöveges dokumentumainak a formátumai. 
+3. A különböző felületeken különböző jobb oldali panelsáv fog megjelenni, az adott felület beállításainak megfelelő módon.
