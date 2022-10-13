@@ -73,6 +73,29 @@
 
 ---
 ## 7. Követelménylista
+|Követelmény azonosító|      		      Leírás                      |
+|        :----:       |			      :----:		          |
+|     K01 	      |  Felhasználó/vendég betdujon lépni a felhasználónevét használva |
+|     K02 	      |  Telefonon és számitógépen is lehessen használni |
+|	  K03 	      |  Minden internetes keresőn elérhető legyen	  |
+|	  K04 	      |  Reszponzív dizájn 				  |
+|	  K05 	      |  Dekoratív dizájn 				  |
+|	  K06 	      |  Mindig elérhető legyen az oldal 				  |
+|  	  K07 	      |  Egyszerűen legyen kezelhető az oldal		  |
+|	  K08 	      |  Az oldal alkalmazkodjon a kijelző méretéhez	  |
+|	  K09 	      |  A felhasználó tudjon képeket feltölteni az oldalhoz      |
+|	  K10 	      |  Tudja a kép kontrasztját javítani     |
+|	  K11 	      |  Tudja a kép élességét feljavítani      |
+|	  K12 	      |  Tudja a kép homályosságát javítani      |
+|	  K13 	      |  Tudja a fényességet csökkenteni     |
+|	  K14 	      |  Tudja a fényességet növelni     |
+|	  K15 	      |  Áttudja méretezni a képet      |
+|	  K16 	      |  Kitudjon nyerni a képből karaktert és azt törölni a képről      |
+|	  K17 	      |  A felhasználó áttudja convertálni a képet: doc pdf stb. formátummá       |
+|	  K18 	      |  A felhasználó letudja szedni a hátteret     |
+|	  K19 	      |  A felhasználó hozzátudjon adni hátteret a képhez      |
+|	  K20 	      |  A felhasználó letudja menteni a saját preset-jeit      |
+|	  K21 	      |  A felhasználó letudja menteni az elkészült képet a változtatásokkal     |
 
 ---
 ## 8. Használati esetek
