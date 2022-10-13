@@ -29,7 +29,15 @@
 * Továbbá, az alkalmazás egy piaci rés betöltésére lenne alkalmas
 ---
 ## 3. Vágyálom rendszer leírása
-
+* A rendszerünk, mint azt fentebb is említettem három kéepkhez kötődő funkcionalitással fog rendelkezni:
+    * A felhasználó fel tudja majd javítani a képeit:
+        * Pl. kontraszt, fényesség (brightness), élesség (sharpness) és egyebek változtatása, feljavítása
+        * Lenne külön opció *preset<sup>1</sup>*-ek mentésére is, amit később bármikor be tud tölteni, ha beírja az általa kiválasztott felhasználónevet amit az oldal bekér az alkalmazás indulásakor a kezdő képernyőn.
+    * El tudja majd távolítani a hátteret a képei mögül, az eltávolítandó szín kiválasztása után, ami mögé majd esetlegesen be tud szúrni/rakni egy másik, általa kiválasztott képet.
+    * Ki tudja majd nyerni a szöveget a képeiből:
+        * Pl. lefotóz egy számlát, amit dokumentálni szeretne, ezáltal befotózza azt, feltölti az oldalra, az pedig kinyeri belőle a szöveget.
+            * Mindezt opcionálisan ki tudja exportálni egy külső formátumba<sup>2</sup> mint például *PDF*, *DOCX*, *DOC* és egyebek.
+* A felhasználó le tudja majd menteni az általa szerkesztette, feljavított képet, illetve a kigenerált dokumentumokat.
 ---
 ## 4. A rendszerre vonatkozó külső megszorítások: pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása
 
