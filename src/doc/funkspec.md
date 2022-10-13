@@ -15,7 +15,7 @@
         * Pl. Android, iOS
     * Több nyelvű felhasználói felületet tartalmazzon, hiszen egyszerű és érthető lesz a felület e nélkül is
     * A felhasználó képeit lementse, hiszen az sem etikus, sem biztonságos nem lenne, a GDPR-ra nézve, de ezekről lentebb, a megszorítások résznél lesz bővebb leírás.
-    * Professzionális képek előállítása, hiszen ezekre, akik ilyen akarnak ott vannak a nagy gyártók szoftverei.
+    * Professzionális képek előállítása, hiszen akik ilyet akarnak ott vannak a nagy gyártók szoftverei.
         * Az alkalmazásunk az egyszerűségre és gyorsaságra törekszik.
 ---
 ## 2. Jelenlegi helyzet leírása
@@ -29,7 +29,7 @@
 * Továbbá, az alkalmazás egy piaci rés betöltésére lenne alkalmas
 ---
 ## 3. Vágyálom rendszer leírása
-* A rendszerünk, mint azt fentebb is említettem három kéepkhez kötődő funkcionalitással fog rendelkezni:
+* A rendszerünk, mint azt fentebb is említettem három képekhez kötődő funkcionalitással fog rendelkezni:
     * A felhasználó fel tudja majd javítani a képeit:
         * Pl. kontraszt, fényesség (brightness), élesség (sharpness) és egyebek változtatása, feljavítása
         * Lenne külön opció *preset<sup>1</sup>*-ek mentésére is, amit később bármikor be tud tölteni, ha beírja az általa kiválasztott felhasználónevet amit az oldal bekér az alkalmazás indulásakor a kezdő képernyőn.
