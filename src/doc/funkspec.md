@@ -10,6 +10,13 @@
     * Pár kattintás által tudjon szöveget kinyerni egy képből
     * Tudjon minél több formátumba exportálni
     * Hátteret tudjon eltávolítani
+* Az alkalmazásunknak nem célja hogy:
+    * Más platformokon működjön natív módon
+        * Pl. Android, iOS
+    * Több nyelvű felhasználói felületet tartalmazzon, hiszen egyszerű és érthető lesz a felület e nélkül is
+    * A felhasználó képeit lementse, hiszen az sem etikus, sem biztonságos nem lenne, a GDPR-ra nézve, de ezekről lentebb, a megszorítások résznél lesz bővebb leírás.
+    * Professzionális képek előállítása, hiszen ezekre, akik ilyen akarnak ott vannak a nagy gyártók szoftverei.
+        * Az alkalmazásunk az egyszerűségre és gyorsaságra törekszik.
 ---
 ## 2. Jelenlegi helyzet leírása
 
