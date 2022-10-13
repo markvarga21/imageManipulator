@@ -19,7 +19,25 @@
 * Az alkalmazásnak tudni kell futnia a weben, amit bárhonnan el tudnak érni probélma nélkül, ezáltal lehetőséget adva arra, hogy bárhol a világon tudjuk egyből fényképezés után, a képet feltöltve azt szerkeszteni és manipulálni.
 ---
 ## 4. Funkcionális követelmények
+* A felhasználó tudjon képeket feltölteni az oldalhoz
+* A felhasználó feltudja javítani a képet
+  * Tudja a kép kontrasztját javítani
+  * Tudja a kép élességét feljavítani
+  * Tudja a kép homályosságát javítani
+  * Tudja a fényességet csökkenteni
+  * Tudja a fényességet növelni
+  * Áttudja méretezni a képet
 
+* Kitudjon nyerni a képből karaktert és azt törölni a képről
+* A felhasználó áttudja convertálni a képet: doc, pdf, docx stb. formátummá 
+* A felhasználó letudja szedni a hátteret
+* A felhasználó hozzátudjon adni hátteret a képhez
+* A felhasználó egy felhasználónév megadásával tudjon bejelentkezni
+* A felhasználó letudja menteni a saját preset-jeit
+* A felhasználó letudja menteni az elkészült képet a változtatásokkal
+* A weboldal legyen reszponzív
+* Tudjon alkalmazkodni különféle képernyő méretekhez
+  
 ---
 ## 5. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása
 
