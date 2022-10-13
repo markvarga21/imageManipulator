@@ -40,7 +40,14 @@
 * A felhasználó le tudja majd menteni az általa szerkesztette, feljavított képet, illetve a kigenerált dokumentumokat.
 ---
 ## 4. A rendszerre vonatkozó külső megszorítások: pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása
-
+* A rendszernek/alkalmazásnak a következő megszorításokat kell tartalmaznia:
+    * Nem szabad hogy felhasználó adatokat tároljon.
+        * Csak a felhasználó által egyedileg kiválasztott felhasználónév tárolására van engedély, ami a későbbi preset-ek beazonosítására fog az alkalmazás használni.
+    * Tiltott a felhasználó azonosítására alkalmas sütik használata.
+    * Innovatív technológiákat kell használnia, ami lehetőleg minden modern böngészőben működik
+    * Nem szabad, hogy lefagyjon az alkalmazás
+    * Tilos trágár, explicit felhasználónevet választani a felhasználónak a bejelentkezésnél
+    * Tilos tárolnia a felhasználó képeit, hiszen az a GDPR bizonyos szabályaival szembe menne.
 ---
 ## 5. Jelenlegi üzleti folyamatok modellje
 
