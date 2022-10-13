@@ -99,6 +99,27 @@
 
 ---
 ## 8. Használati esetek
+* Felhasználó:
+    * Beléphet az oldalra a felhasználónevével
+    * Feltud képeket tölteni
+    * Tudja szerkeszteni a képeket:
+        * Tudja javítani a kép:
+            *  Kontrasztját
+            *  élességét
+            *  homályosságát
+            *  fényességét
+     * Áttudja méretezni a képet
+     * Karaktert tud kinyerni a képből
+     * Áttudja konvertálni (doc, pdf, docx, stb.)
+     * Letudja szedni a hátteret
+     * Hozzátud adni hátteret
+     * Preset-eket tud lementeni
+     * A változtatásokkal elkészült képet letudja menteni
+* Admin:
+    * Megtudja csinálni azon dolgokat mint a felhasználó
+    * Tud változtatni a kódon
+    * Tud bugfix-elni ha szükséges
+    * Illetve hozzátud adni más funkciót akár
 
 ---
 ## 9. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
