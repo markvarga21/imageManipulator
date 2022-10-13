@@ -40,6 +40,17 @@
   
 ---
 ## 5. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása
+* A rendszernek/alkalmazásnak a következő megszorításokat kell tartalmaznia
+    * Legyen reszponzív a weboldal
+    * A web felület szabványos eszközökkel készüljön
+    * Rendszer/alkalmazás legtöbb böngészőt támogassa
+    * A weboldalt lehessen különböző böngészőkön és operációs rendszereken is használni
+    * A felhasználónak a megadott felhasználónevét lehessen eltárolni más személyes információt nem
+    * A felhasználó a saját preset-jein kívűl mást ne tudjon eltárolni
+    * A felhasználók által feltölött képeket tilos elmenteni egy külön tárolóba
+    * Tilos trágár, explicit felhasználónevet választani a felhasználónak a bejelentkezésnél
+    * Nem szabad, hogy lefagyjon az alkalmazás
+    * Tiltott a felhasználó azonosítására alkalmas sütik használata.
 
 ---
 ## 6. Jelenlegi üzleti folyamatok modellje
