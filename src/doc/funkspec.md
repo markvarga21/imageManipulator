@@ -59,6 +59,17 @@
 
 ---
 ## 6. Igényelt üzleti folyamatok modellje
+* Online elérhető, ingyenes rendszer létrehozása
+    * Webes megjelenés mind mobilról (hordozhatóság), mind pedig számítógépről
+    * Legtöbb operációs rendszeren lehessen használni
+    * Ingyenes legyen a rendszer ne legyen fizetős része
+    * Mindig elérhető legyen
+* Átlátható design kialakítása a weboldalon
+    * Funkciók elkülönítése egymástól
+    * Elegáns design kialakítása
+    * Letisztult , sima, de elegáns színű háttér
+* Egyszerű betűtípus, betűszín és ikonok alkalmazása
+    * A weboldalon lévő ikonok, betűtípusok és színek egyszerűek de még elegánsak legyenek
 
 ---
 ## 7. Követelménylista
