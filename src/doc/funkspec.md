@@ -1,6 +1,15 @@
 # **Funkcionális specifikáció**
 ## 1. A rendszer céljai és nem céljai
-
+* Az alkalmazásunk célja közé tartoznak a következők:
+    * Egyszerű képszerkesztés
+    * Innovatív megoldások alkalmazása
+    * Dekoratív design
+    * Reponzív felület
+    * Mindig rendelkezésre álljon
+    * Ingyenes legyen
+    * Pár kattintás által tudjon szöveget kinyerni egy képből
+    * Tudjon minél több formátumba exportálni
+    * Hátteret tudjon eltávolítani
 ---
 ## 2. Jelenlegi helyzet leírása
 
