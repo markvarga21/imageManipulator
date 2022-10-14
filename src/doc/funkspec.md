@@ -62,6 +62,10 @@
 
 ---
 ## 9. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
+ * Ha sikerül beolvasni a képet, akkor jobb oldalon különböző tulajdonságokat <br>
+ lehet állítni, ezek: contrast, brightness, sharpness.<br>
+ Alul pedig lehet nagyítani, és kicsinyíteni is, illetve <br>
+ full sceenre is lehet állítani.
 
 ---
 ## 10. Képernyő tervek
