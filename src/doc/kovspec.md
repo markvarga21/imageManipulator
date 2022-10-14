@@ -28,6 +28,20 @@
 
 ---
 ## 7. Igényelt üzleti folyamatok modellje
+* Online elérhető, ingyenes rendszer létrehozása
+    * Webes megjelenés mind mobilról (hordozhatóság), mind pedig számítógépről
+* Átlátható design kialakítása a weboldalon
+    * Photo retouch alkalmazása
+    * Contrast állíthatóság
+    * Brightness állíthatóság
+    * Sharpness állíthatóság
+* Letisztult , sima, de elegáns színű háttér
+    * Egyszerű betűtípus és betűszín alkalmazása
+    * A weboldalon lévő adatok szerkeszthetővé tétele/Könnyű szerkeszthetőség
+    * A már felvett feladatok nevének szerkeszthetősége
+    * A már nem kívánatos feladatok törölhetősége
+    * A képet lehet nagyítani, kicsinyíteni
+    * Képet lehet letölteni és feltölteni
 
 ---
 ## 8. Követelménylista
