@@ -123,6 +123,10 @@
 
 ---
 ## 9. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
+ * Ha sikerül beolvasni a képet, akkor jobb oldalon különböző tulajdonságokat <br>
+ lehet állítni, ezek: contrast, brightness, sharpness.<br>
+ Alul pedig lehet nagyítani, és kicsinyíteni is, illetve <br>
+ full sceenre is lehet állítani.
 
 ---
 ## 10. Képernyő tervek
@@ -134,10 +138,14 @@
 ![Home page](../resources/homePage.png)
 ---
 ## 11. Forgatókönyvek
-
+* Futási időben egy szereplő figyelhető meg. Az alkalmazást elindítva megjelenik egy üres kezelőfelület, <br>
+ezután be lehet olvasni a képet. Felül láthatóak ikonok, amikkel le lehet tölteni, <br>
+illetve fel lehet tölteni a képet. Bejelentkezésre is lehetőség van.
 ---
 ## 12. Funkció – követelmény megfeleltetés
-
+* A funkció magát a projektnek a működését, funkcióját mutatja be, míg a követelmény<br>
+  azt, hogy hogyan kell használni,és azt, hogy mik a követelményei annak, hogy elindítsuk<br>
+  a programunkat. Ahhoz, hogy használni lehessen az appot be kell jelentkezni.
 ---
 ## 13. Fogalomszótár
 1. Egy preset, az amikor a felhasználó beállítja a különböző képszerkesztési beállításokat, s azokat lementi, hogy később is be tudja majd tölteni és felhasználni őket.
