@@ -71,8 +71,10 @@
 ## 10. Képernyő tervek
 
 ---
-## 11. Forgatókönyvek
-
+## 11. Forgatókönyvekatnia.
+* Futási időben egy szereplő figyelhető meg. Az alkalmazást elindítva megjelenik egy üres kezelőfelület, <br>
+ezután be lehet olvasni a képet. Felül láthatóak ikonok, amikkel le lehet tölteni, <br>
+illetve fel lehet tölteni a képet. Bejelentkezésre is lehetőség van.
 ---
 ## 12. Funkció – követelmény megfeleltetés
 
