@@ -38,13 +38,35 @@
 * Letisztult , sima, de elegáns színű háttér
     * Egyszerű betűtípus és betűszín alkalmazása
     * A weboldalon lévő adatok szerkeszthetővé tétele/Könnyű szerkeszthetőség
-    * A már felvett feladatok nevének szerkeszthetősége
-    * A már nem kívánatos feladatok törölhetősége
     * A képet lehet nagyítani, kicsinyíteni
     * Képet lehet letölteni és feltölteni
 
 ---
 ## 8. Követelménylista
+|Követelmény azonosító|      		      Leírás                      |
+|        :----:       |			      :----:		          |
+|     K01 	      |  Felhasználó/vendég be tudjon lépni a felhasználónevét használva |
+|     K02 	      |  Telefonon és számitógépen is lehessen használni |
+|	  K03 	      |  Minden internetes keresőn elérhető legyen	  |
+|	  K04 	      |  Reszponzív dizájn 				  |
+|	  K05 	      |  Dekoratív dizájn 				  |
+|	  K06 	      |  Mindig elérhető legyen az oldal 				  |
+|  	  K07 	      |  Egyszerűen legyen kezelhető az oldal		  |
+|	  K08 	      |  Az oldal alkalmazkodjon a kijelző méretéhez	  |
+|	  K09 	      |  A felhasználó tudjon képeket feltölteni az oldalra      |
+|	  K10 	      |  Tudja a kép kontrasztját javítani     |
+|	  K11 	      |  Tudja a kép élességét feljavítani      |
+|	  K12 	      |  Tudja a kép homályosságát javítani      |
+|	  K13 	      |  Tudja a fényességet csökkenteni     |
+|	  K14 	      |  Tudja a fényességet növelni     |
+|	  K15 	      |  Át tudja méretezni a képet      |
+|	  K16 	      |  Ki tudjon nyerni a képből karaktert      |
+|	  K17 	      |  A felhasználó át tudja convertálni a képet: doc pdf stb. formátummá       |
+|	  K18 	      |  A felhasználó le tudja szedni a hátteret     |
+|	  K19 	      |  A felhasználó hozzá tudjon adni hátteret a képhez      |
+|	  K20 	      |  A felhasználó le tudja menteni a saját preset-jeit      |
+|	  K21 	      |  A felhasználó le tudja menteni az elkészült képet a változtatásokkal     |
+
 
 ---
 ## 9. Fogalomtár
