@@ -50,15 +50,76 @@
     * Tilos tárolnia a felhasználó képeit, hiszen az a GDPR bizonyos szabályaival szembe menne.
 ---
 ## 5. Jelenlegi üzleti folyamatok modellje
+* Telepített képszerkesztő használata:
+    * A legtöbb képszerkesztőt le kell tölteni és telepíteni
+    * A legtöbb fizetős és drága
+    * A legtöbbet egy ideig lehet használni utána fizetni kell
+    * Nem átlátható így a felhasználónak a legtöbb idejét az veszi el hogy az alkalmazás ki kell ismernie
+    * Illetve ha a felhasználónak nincs erős gépe akár le is fagyhat az alkalmazás ami az addigi változtatások kárára mehet
 
 ---
 ## 6. Igényelt üzleti folyamatok modellje
+* Online elérhető, ingyenes rendszer létrehozása
+    * Webes megjelenés mind mobilról (hordozhatóság) mind pedig számítógépről
+    * Legtöbb operációs rendszeren lehessen használni
+    * Ingyenes legyen a rendszer ne legyen fizetős része
+    * Mindig elérhető legyen
+* Átlátható design kialakítása a weboldalon
+    * Funkciók elkülönítése egymástól
+    * Elegáns design kialakítása
+    * Letisztult , sima, de elegáns színű háttér
+* Egyszerű betűtípus, betűszín és ikonok alkalmazása
+    * A weboldalon lévő ikonok, betűtípusok és színek egyszerűek de még elegánsak legyenek
 
 ---
 ## 7. Követelménylista
+|Követelmény azonosító|      		      Leírás                      |
+|        :----:       |			      :----:		          |
+|     K01 	      |  Felhasználó/vendég be tudjon lépni a felhasználónevét használva |
+|     K02 	      |  Telefonon és számitógépen is lehessen használni |
+|	  K03 	      |  Minden internetes keresőn elérhető legyen	  |
+|	  K04 	      |  Reszponzív dizájn 				  |
+|	  K05 	      |  Dekoratív dizájn 				  |
+|	  K06 	      |  Mindig elérhető legyen az oldal 				  |
+|  	  K07 	      |  Egyszerűen legyen kezelhető az oldal		  |
+|	  K08 	      |  Az oldal alkalmazkodjon a kijelző méretéhez	  |
+|	  K09 	      |  A felhasználó tudjon képeket feltölteni az oldalra      |
+|	  K10 	      |  Tudja a kép kontrasztját javítani     |
+|	  K11 	      |  Tudja a kép élességét feljavítani      |
+|	  K12 	      |  Tudja a kép homályosságát javítani      |
+|	  K13 	      |  Tudja a fényességet csökkenteni     |
+|	  K14 	      |  Tudja a fényességet növelni     |
+|	  K15 	      |  Át tudja méretezni a képet      |
+|	  K16 	      |  Ki tudjon nyerni a képből karaktert      |
+|	  K17 	      |  A felhasználó át tudja convertálni a képet: doc pdf stb. formátummá       |
+|	  K18 	      |  A felhasználó le tudja szedni a hátteret     |
+|	  K19 	      |  A felhasználó hozzá tudjon adni hátteret a képhez      |
+|	  K20 	      |  A felhasználó le tudja menteni a saját preset-jeit      |
+|	  K21 	      |  A felhasználó le tudja menteni az elkészült képet a változtatásokkal     |
 
 ---
 ## 8. Használati esetek
+* Felhasználó:
+    * Beléphet az oldalra a felhasználónevével
+    * Fel tud képeket tölteni
+    * Tudja szerkeszteni a képeket:
+        * Tudja javítani a kép:
+            *  Kontrasztját
+            *  Élességét
+            *  Homályosságát
+            *  Fényességét
+     * Át tudja méretezni a képet
+     * Karaktert tud kinyerni a képből
+     * Át tudja konvertálni (doc, pdf, docx, stb.)
+     * Le tudja szedni a hátteret
+     * Hozzá tud adni hátteret
+     * Preset-eket tud lementeni
+     * A változtatásokkal elkészült képet le tudja menteni
+* Admin:
+    * Meg tudja csinálni azon dolgokat mint a felhasználó
+    * Tud változtatni a kódon
+    * Tud bugfix-elni ha szükséges
+    * Illetve hozzá tud adni más funkciót akár
 
 ---
 ## 9. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
