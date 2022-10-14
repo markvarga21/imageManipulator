@@ -19,22 +19,22 @@
 * Az alkalmazásnak tudni kell futnia a weben, amit bárhonnan el tudnak érni probélma nélkül, ezáltal lehetőséget adva arra, hogy bárhol a világon tudjuk egyből fényképezés után, a képet feltöltve azt szerkeszteni és manipulálni.
 ---
 ## 4. Funkcionális követelmények
-* A felhasználó tudjon képeket feltölteni az oldalhoz
-* A felhasználó feltudja javítani a képet
+* A felhasználó tudjon képeket feltölteni az oldalra
+* A felhasználó fel tudja javítani a képet
   * Tudja a kép kontrasztját javítani
   * Tudja a kép élességét feljavítani
-  * Tudja a kép homályosságát javítani
+  * Tudja a kép homályosságát állítani
   * Tudja a fényességet csökkenteni
   * Tudja a fényességet növelni
-  * Áttudja méretezni a képet
+  * Át tudja méretezni a képet
 
-* Kitudjon nyerni a képből karaktert és azt törölni a képről
-* A felhasználó áttudja convertálni a képet: doc, pdf, docx stb. formátummá 
-* A felhasználó letudja szedni a hátteret
+* Ki tudjon nyerni a képből karaktert és azt törölni a képről
+* A felhasználó át tudja convertálni a képet: doc, pdf, docx stb. formátummá 
+* A felhasználó le tudja szedni a hátteret
 * A felhasználó hozzátudjon adni hátteret a képhez
 * A felhasználó egy felhasználónév megadásával tudjon bejelentkezni
-* A felhasználó letudja menteni a saját preset-jeit
-* A felhasználó letudja menteni az elkészült képet a változtatásokkal
+* A felhasználó le tudja menteni a saját preset-jeit
+* A felhasználó le tudja menteni az elkészült képet a változtatásokkal
 * A weboldal legyen reszponzív
 * Tudjon alkalmazkodni különféle képernyő méretekhez
   
@@ -42,10 +42,10 @@
 ## 5. A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok és ajánlások felsorolása
 * A rendszernek/alkalmazásnak a következő megszorításokat kell tartalmaznia
     * Legyen reszponzív a weboldal
-    * A web felület szabványos eszközökkel készüljön
+    * Innovatív technológiákat kell használnia, ami lehetőleg minden modern böngészőben működik
     * Rendszer/alkalmazás legtöbb böngészőt támogassa
-    * A weboldalt lehessen különböző böngészőkön és operációs rendszereken is használni
-    * A felhasználónak a megadott felhasználónevét lehessen eltárolni más személyes információt nem
+    * A weboldal elérhető legyen a legtöbb böngészőn és operációs rendszeren
+    * A felhasználónak a felhasználó nevén kívül mást ne kelljen megadnia
     * A felhasználó a saját preset-jein kívűl mást ne tudjon eltárolni
     * A felhasználók által feltölött képeket tilos elmenteni egy külön tárolóba
     * Tilos trágár, explicit felhasználónevet választani a felhasználónak a bejelentkezésnél
@@ -55,10 +55,10 @@
 ---
 ## 6. Jelenlegi üzleti folyamatok modellje
 * Telepített képszerkesztő használata:
-    * A legtöbb képszerkesztőt lekell tölteni és telepíteni
-    * A legtöbb fizetős és dárga
+    * A legtöbb képszerkesztőt le kell tölteni és telepíteni
+    * A legtöbb fizetős és drága
     * A legtöbbet egy ideig lehet használni utána fizetni kell
-    * Nem átlátható így a felhasználónak a legtöbb idejét az veszi el hogy az alkalmazás kikell ismernie
+    * Nem átlátható így a felhasználónak a legtöbb idejét az veszi el hogy az alkalmazás ki kell ismernie
     * Illetve ha a felhasználónak nincs erős gépe akár le is fagyhat az alkalmazás ami az addigi változtatások kárára mehet
 
 ---
