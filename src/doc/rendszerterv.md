@@ -14,6 +14,8 @@
     * Szerkesztett kép vagy dokumentum letöltése.
 * Üzleti entitások:
     * Maga a webalkalmazás (mivel maga az alkalmazás csekély méretű)
+* Szemléltető folyamatábra:<br>
+![Flowchart](../resources/flowChart.png)
 ---
 ## 4. Követelmények
 ---
