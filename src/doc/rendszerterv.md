@@ -12,6 +12,8 @@
     * Fénykép feltöltése a platformra, amit az adott felhasználó szerkeszteni, manipulálni szeretne.
     * Manipulációs mód kiválasztása, legyen az a kép feljavítása, háttér eltávolítása avagy szöveg kinyerése és exportálása az előre megadott kimeneti formátumok egyikébe.
     * Szerkesztett kép vagy dokumentum letöltése.
+* Üzleti entitások:
+    * Maga a webalkalmazás (mivel maga az alkalmazás csekély méretű)
 ---
 ## 4. Követelmények
 ---
