@@ -22,5 +22,10 @@
 ## 11. Tesztterv
 ---
 ## 12. Telepítési terv
+* Adatbázis telepítése
+  * Fejlesztés alatt:
+    * Mivel Redis-t használ az alkalmazás, van lehetőség ingyen adatbázis host-olásra, redis cloud-ot használva, egészen 30MB tárhelyig, ami a fejlesztésre bőven elég, hiszen csak szavakat tárolunk.
+  * Deploy után:
+    * Az alkalmazás kihelyezése után ajánlatos egy fizetett plan-re váltani a Redis Cloud-ban, ami lehetővé teszi több konkurens használatot, illetve nagyobb tár kapacitást.
 ---
 ## 13. Karbantartási terv
