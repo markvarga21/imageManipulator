@@ -8,6 +8,10 @@
     * **Felhasználó**: ez alatt értetik bármely felhasználó, akármilyen korcsoportban, aki az alkalmazást használni akarja.
     * **Admin**: akinek jogosultsága van a rendszer karbantartására és szerkesztésére
     * **Tesztelők**: lehetnek akár fejlesztők (az alpha tesztelés esetében), vagy az alkalmazás béta tesztelői, akik véletlenszerűen lettek kiválasztva a felhasználói bázisból.
+* Üzleti folyamatok:
+    * Fénykép feltöltése a platformra, amit az adott felhasználó szerkeszteni, manipulálni szeretne.
+    * Manipulációs mód kiválasztása, legyen az a kép feljavítása, háttér eltávolítása avagy szöveg kinyerése és exportálása az előre megadott kimeneti formátumok egyikébe.
+    * Szerkesztett kép vagy dokumentum letöltése.
 ---
 ## 4. Követelmények
 ---
