@@ -26,6 +26,17 @@
 ## 7. Absztrakt domain modell
 ---
 ## 8. Architekturális terv
+* A webalkalmazásunkban lesz egy elkülönített frontend illetve egy backend.
+    * Az alkalmazás frontend részen a HTML, JavaScript és CSS hármas kombinációját fogja alkalmazni
+    * Backend részen a python nyelvbeli *Flask* framework lesz használva a Rest API kiépítésére, illetve további külső szolgáltatásokat, modulokat a funkcionalitások kielégítése végett.
+* A frontend tehát HTML-t fog használni az elemek összefűzésére, CSS-t az elemek stilizálására, JavaScript-et az elemek manipulálására és a backend-del való kommunikálásra.
+* A backend pedig a Flask keretrendszerre fog épülni, ami fogja még használni továbbá a Redis, openCV, Pillow és egyéb konvertáló python modulokat.
+* Utóbbi lehetővé fogja tenni a különböző rétegek szétválasztását (model, nézet, vezérlő - MVC architekturális minta).
+    * A backend-en belül például szét vannak választva az app (controller), üzleti logika (service) és a perzisztencia (repository) rétegek.
+* Az események kezelésében mint például slider-ek értékei, mozgatása, panelek közti váltás stb. a JavaScript-beli eseménykezelést fogjuk használni.
+* Az adatok tárolására, perzisztálására egy NoSQL adatbázist fog használni az alkalmazás, azon belül is a Redis-t.
+* A weboldal biztonságát az biztosítja, hogy nincsenek semmilyen harmadik féltől származó sütik használva, amikkel azonosítani lehetne a felhasználót, illetve nincsenek is ilyen sütik elküldve a backendtől.
+    * Továbbá, mivel nem tárol az alkalmazás semmilyen felhasználói adatot explicit módon, ezért nincsenek GDPR szabályszegések sem.
 ---
 ## 9. Adatbázis terv
 * A szavak tárolására NoSQL adatbázis rendszert fog használni a rendszer, azon belül is a Redis-t
