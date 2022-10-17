@@ -4,6 +4,10 @@
 ## 2. Projektterv
 ---
 ## 3. Üzleti folyamatok modellje
+* Üzleti szereplők
+    * **Felhasználó**: ez alatt értetik bármely felhasználó, akármilyen korcsoportban, aki az alkalmazást használni akarja.
+    * **Admin**: akinek jogosultsága van a rendszer karbantartására és szerkesztésére
+    * **Tesztelők**: lehetnek akár fejlesztők (az alpha tesztelés esetében), vagy az alkalmazás béta tesztelői, akik véletlenszerűen lettek kiválasztva a felhasználói bázisból.
 ---
 ## 4. Követelmények
 ---
