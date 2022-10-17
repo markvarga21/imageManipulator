@@ -14,8 +14,10 @@
   * A felhasználó egy felhasználónév megadásával tudjon bejelentkezni
   * A felhasználó le tudja menteni a saját preset-jeit
   * A felhasználó le tudja menteni az elkészült képet a változtatásokkal
-* Fontos, hogy a felület bárhol elérhető legyen, ott is ahol internet szolgáltatás nem elérhető, ezért webes felületen kívül bármilyen, kliens által választott okos eszközökre is telepíthető legyen.
-* Annak érdekében, hogy átlátható mlegyen az alkalmazás, a design-ra elég nagy figyelmet szentelünk. A mostanában divatos reszponzív design-t fogjuk használni.
+* Fontos, hogy a felület bárhol elérhető legyen, ott is ahol internet szolgáltatás nem elérhető, <br>
+  ezért webes felületen kívül bármilyen, kliens által választott okos eszközökre is telepíthető legyen. <br>
+* Annak érdekében, hogy átlátható mlegyen az alkalmazás, a design-ra elég nagy figyelmet szentelünk. <br>
+  A mostanában divatos reszponzív design-t fogjuk használni. <br>
 * A cél egy olyan oldal létrehozása amegy bárki számára bármikor rendelkezésre áll a neten.
 ---
 ## 2. Projektterv
@@ -29,7 +31,16 @@
 ## 6. Fizikai környezet
 ---
 ## 7. Absztrakt domain modell
+* Frontend:
+    * HTML: A HTML egy leíró nyelv, melyet weboldalak elkészítéséhez találtak fel, és mára <br>
+      már internetes szabvánnyá vált.
+    * CSS: A CSS egy stílusleíró nyelv, mely a HTML vagy XHTML típusú strukturált dokumentumok<br>
+      stílusát írja le. Weblapunk stílusát ezzel szabályozhatjuk.
+    * JavaScript: A JavaScript programozási nyelv egy objektumorientált, prototípus-alapú szkriptnyelv, <br>
+      amelyet weboldalakon sokat használnak. A weblapunk programozásához fog majd kelleni.
 
+* Backend:
+    * A backendhez python flaskot, reddist, opencv-t használunk.
 ---
 ## 8. Architekturális terv
 ---
