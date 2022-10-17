@@ -43,6 +43,17 @@
 ![Database model](../resources/dabataseModel.png)
 ---
 ## 10. Implementációs terv
+* Mint azt fentebb is említettem, az alkalmazásunk HTML-t, CSS-t, JavaScript-et illetve Python-t fog használni a működéséhez.
+    * Ez által minimális, ám bár tisztán MVC-nek nem mondható, MVC architekturális mintát tudunk követni, ahol el tudjuk szeparálni egymástól a modellt, kontrollert és nézetet.
+* Függőségek kezelésére nem feltétlen van szükség, illetve python-ban nem is nagyon van lehetőség különböző build tool-ok használatára, mivel az alkalmazásban csupán pár külső python module/library van használva, a *redis*, *jsonify*, *Flask*, *openCV*, *Pillow* és egyéb külső szöveges formátumba konvertáló modulok (pdf, docx, doc stb.), mindez a backend-en belül.
+* Alkalmazásunk továbbá 3 különböző réteget fog tartalmazni a backend-en:
+    * **Perzisztencia réteg**: ez egy python fájl lesz, ami kezeli a redis adatbázist, mely a következő funkcionalitásokkal fog rendelkezni:
+        * Mint például: felhasználó regisztrálása/mentése, preset-ek mentése
+    * **Üzleti logika réteg**: ez a réteg fogja végezni a különböző kép-manipulálási műveleteket (szöveg kinyerése, kép feljavítása, háttér eltávolítása)
+        * Minden ilyen funkcionalitásnak, service-nek egy vagy több külön python fájl lesz rendelve.
+    * **Kontroller**: ez fogja a servicek-hez irányítani a különböző beérkező HTTP kéréseket.
+        * Mindezt a frontend, egy library-t használva fogja elérni (pl. *Axios* vagy *fetch API*) és hívni.
+* Az előbbieknek köszönhetően pedig, szépen tudjuk követni az Egyszeres Felelősség Elvét (angolul Single Responsibility Principle - a SOLID elvekből az elsőt), ami lehetővé fogja tenni az alkalmazás egyszerűbb és átláthatóbb karbantartását.
 ---
 ## 11. Tesztterv
 ---
