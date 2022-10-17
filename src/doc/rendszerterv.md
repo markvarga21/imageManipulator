@@ -49,6 +49,28 @@
 ## 10. Implementációs terv
 ---
 ## 11. Tesztterv
+* Egy alkalmazás készítésekor, illetve kiadás előtt nagyon fontos szerepet játszanak a teszttervek.<br>
+  A teszttervek által tudunk különféle funkciók helyes működéséről meggyőződni,<br>
+  és a különféle üzleti szolgáltatások hitelesítéséről is.<br>
+  A szoftver kiadása előtt 2 tesztet kell végrehajtani, melyek az alpha illetve beta tesztek.
+
+* Alpha teszt
+    * Fejlesztő csapat fogja elvégezni.
+    * Ezen teszt során azt vizsgáljuk, hogy az alkalmazás hogyan reagál különboző böngészőkben,<br>
+     és az adott funkciók működneke.
+    * Ha azt látjuk, hogy az előző feltételek megfelelnek, akkor sikeres volt az alpha teszt, és jöhet majd a beta teszt.
+
+* Beta teszt
+    * A beta tesztet a fejlesztő csapattól független, kívülálló emberek végzik el.
+    * Ennek a tesztnek célja az, hogy a felhasználóktól visszajelzést kapjunk, hogy a <br>
+      mennyire működőképes az alkalmazás.
+
+* Amennyiben hibás működésbe ütköznek a felhasználók, akkor egy tesztelési naplóban <br>
+  levezetik a tapasztalataikat, és azt visszaküldik a fejlesztőknek, a fejlesztők pedig megoldják a hibát.
+
+* Tesztelésre használt eszközök
+  Böngészők: Google Chrome , Mozilla Firefox, Microsoft Edge, Opera <br>
+  Operációs rendszer: Windows 10, Ubuntu
 ---
 ## 12. Telepítési terv
 ---
