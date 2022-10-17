@@ -33,5 +33,10 @@
     * A backend-nél pedig elegendő a fő *app.py* fájl futtatása
   * Deploy után:
     * Nincs szükség telepíteni sem a frontend-et, sem pedig a backend-et, hiszen a frontend-et futtatását a *Github Pages* fogja megoldani, a backend-et pedig a *render.com* weboldal.
+* Alkalmazás telepítése
+  * Fejlesztés alatt:
+    * Nincs szükség telepítésre, hiszen a fejlesztő környezetből (*Visual Studio Code*) van lehetőség live server nyitására is, vagy csak egyszerűen megnyitjuk az index.html oldalt egy tetszőleges webböngészőben.
+  * Deploy után:
+    * Elegendő csak az előre meghatározott github-os linket megnyitni, ami automatikusan behozza és betölti a szolgáltatást.
 ---
 ## 13. Karbantartási terv
