@@ -73,6 +73,46 @@
 
 ---
 ## 5. Funkcionális terv
+* A webalkalmazásunknak az a célja, hogy azon embereket segítsük akik nem engedhetik meg maguknak a drága képszerkesztőket illetve ha nincs olyan erős gépük azokhoz. 
+* Rendszerszerepkörök:
+    * Felhasználó(user)
+    * Fejlesztő
+
+* Rendszerhasználati esetek és lefutásaik:
+    * Felhasználó(user):
+        * Bejelentkezés:
+            * 1.: A felhasználó megadja a felhasználónevét
+            * 2.: Rá kattint a bejelentkezésre
+            * 3.: A rendszer bejelentkezteti azzal a felhasználónévvel
+        * Kép feltöltése:
+            * 1.: A fő oldalon a felhasználó rá kattint az upload gombra
+            * 2.: Majd előkeresi a szerkesztésre váró képet
+            * 3.: Ha ez megvan és feltölti akkor a kép megjelenik a fő oldalon
+        * Kontraszt javítás: 
+            * 1.: A CONSTRAST szöveg alatti vonalon lehet egy pontot mozgatni amivel lehet a kontrasztot állítani
+        * Élesség javítás:
+            * 1.: A SHARPNESS szöveg alatti vonalon lehet egy pontot mozgatni amivel lehet az élességet állítani
+        * Fényesség csökkentése vagy növelése:
+            * 1.: A BRIGHTNESS szöveg alatti vonalon lehet egy pontot mozgatni amit ha balra húzunk akkor a fényesség csökken ha jobbra akkor növeljük
+        * Homályosság javítása:
+            * 1.: A BLUR szöveg alatti vonalon lehet egy pontot mozgatni amivel lehet a homályosságot állítani állítani
+        * Katakter kinyerés képből:
+            * 1.: A bal oldali sávnál ki kell választani a második ikont
+            * 2.: Azon a külön oldalon lehet a szöveget kinyerni a képből
+        * Kép átkonvertálása:
+            * 1.: A főoldalon a bal oldali sávban ki kell választani a harmadik ikont és ott lehet a képet átkonvertálni doc, pdf, vagy docx formátumú fájlá    
+        * Kép letöltése:
+            * 1.: A felhasználó elvégzi a szükséges változtatásokat a képpel
+            * 2.: Rá kattint a download gombra aminek következtében az oldal letölti az elkészült képet
+    * Fejlesztő:
+        * A fejlesztő végre tudja hajtani azokat a dolgokat mint a felhasználó
+        * A weboldal kódján tud változtatni és tesztelni
+        * Ha szükséges és igény van rá akkor új funkciókat tud hozzáadni a rendszerhez
+
+* Menü hierarchiák:
+    * Fő oldal: <br>
+![Home page](../resources/homePage.png)
+
 ---
 ## 6. Fizikai környezet
 ---
