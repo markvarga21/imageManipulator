@@ -40,6 +40,37 @@
 ![Flowchart](../resources/flowChart.png)
 ---
 ## 4. Követelmények
+* Funkcionális követelmények:
+    * Felhasználó/vendég be tudjon lépni a felhasználónevét használva
+    * Telefonon és számitógépen is lehessen használni
+    * Minden internetes keresőn elérhető legyen
+    * Mindig elérhető legyen az oldal
+    * Egyszerűen legyen kezelhető az oldal  
+    * Az oldal alkalmazkodjon a kijelző méretéhez
+    * A felhasználó tudjon képeket feltölteni az oldalra
+    * Tudja a kép kontrasztját javítani 
+    * Tudja a kép élességét feljavítani 
+    * Tudja a kép homályosságát javítani
+    * Tudja a fényességet csökkenteni
+    * Tudja a fényességet növelni
+    * Át tudja méretezni a képet 
+    * Ki tudjon nyerni a képből karaktert 
+    * A felhasználó át tudja convertálni a képet: doc pdf stb. formátummá
+    * A felhasználó le tudja szedni a hátteret  
+    * A felhasználó hozzá tudjon adni hátteret a képhez
+    * A felhasználó le tudja menteni a saját preset-jeit
+    * A felhasználó le tudja menteni az elkészült képet a változtatásokkal
+
+* Nem funkcionális követelmények:
+    * Felhasználónak ne lehessen a felhasználó nevén kívűl mást eltárolni, illetve felhasználó ne tárolhasson preset-eken kívűl más adatot
+    * Felhasználót ne lehessen azonosítani
+    * Nem szabad, hogy lefagyjon az alkalmazás
+    * Tilos trágár, explicit felhasználónevet választani a felhasználónak a bejelentkezésnél
+    * Ne lehessen tárolni a felhasználó képeit, hiszen az a GDPR bizonyos szabályaival szembe menne.
+
+* Törvényi előírások, szabványok:
+    * GDPR-nek való megfelelés.
+
 ---
 ## 5. Funkcionális terv
 ---
