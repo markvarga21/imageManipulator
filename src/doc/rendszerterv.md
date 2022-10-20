@@ -2,6 +2,28 @@
 ## 1. A rendszer célja
 ---
 ## 2. Projektterv
+### Projektszerepkörök, felelősségek:
+* Scrum master: Varga József-Márk, Bódi András, Cserés Gábor
+* Product owner: Varga József-Márk, Bódi András, Cserés Gábor
+
+### Projektmunkások és felelőségek:
+
+* Backend munkálatok:
+    * Varga József-Márk
+         * Feladatuk a funkciók létrehozása illetve a preset-ek elmentése
+* Frontend:
+    * Bódi András, Cserés Gábor
+         * Feladatuk az elkészült képernyőtervek alapján létre hozni a weboldal megjelenését
+### Ütemterv:
+
+|          Funkció        |Feladat|Prioritás|Becslés|Aktuális becslés|Eltelt idő|Hátralévő idő|
+|          :----:         |:----: |  :----: | :----:|     :----:     |  :----:  |    :----:   |
+|Követelmény specifikáció |       |0        |7      |7               |7     |       0     |
+|Funkcionális specifikáció|       |0        |7      |7           |7     |   0     |
+|       Rendszerterv      |       |0        |7      |7           |7     |   0     |
+|         Frontend        |       |2        |-      |-               |0     |   -     |
+|         Backend         |       |2        |-      |-           |0     |   -     |
+
 ---
 ## 3. Üzleti folyamatok modellje
 * Üzleti szereplők
