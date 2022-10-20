@@ -115,6 +115,15 @@
 
 ---
 ## 6. Fizikai környezet
+* Az alkalmazás web platformra készül így különféle eszközökön is lehet használni ha van rajtuk böngésző
+* Operációs rendszer független
+* Nincsenek megvásárolt komponenseink
+* Van tűzfal a hálózaton és minden portot is engedélyez
+
+* Fejlesztési környezet:
+    * Visual Studio Code
+    * Git
+
 ---
 ## 7. Absztrakt domain modell
 ---
