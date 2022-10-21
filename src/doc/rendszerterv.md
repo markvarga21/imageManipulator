@@ -75,3 +75,12 @@
 ## 12. Telepítési terv
 ---
 ## 13. Karbantartási terv
+* Az alkalmazás folyamatos üzemeltetése és karbantartása, mely
+magában foglalja a programhibák kijavítását, a belső igények változása miatti
+módosításokat, valamint a környezeti feltételek változása miatt
+megfogalmazott program-, és állomány módosítási igényeket is.
+A szoftveren havonta szeretnénk karbantartásokat végezni, ezen felül bármilyen
+felhasználói hibajelentés után azonnali helyreállítás jön. A szoftveren évente nagyobb
+frissítések, módosítások fordulhatnak elő.
+Idő elteltével új kategóriákat kell hozzáadni az apphoz, hogy fent tartsuk az
+érdeklődési szintet.
