@@ -10,7 +10,7 @@
 
 * Backend munkálatok:
     * Varga József-Márk
-         * Feladatuk a funkciók létrehozása illetve a preset-ek elmentése
+         * Feladata a funkciók létrehozása illetve a preset-ek elmentése
 * Frontend:
     * Bódi András, Cserés Gábor
          * Feladatuk az elkészült képernyőtervek alapján létre hozni a weboldal megjelenését
@@ -62,7 +62,7 @@
     * A felhasználó le tudja menteni az elkészült képet a változtatásokkal
 
 * Nem funkcionális követelmények:
-    * Felhasználónak ne lehessen a felhasználó nevén kívűl mást eltárolni, illetve felhasználó ne tárolhasson preset-eken kívűl más adatot
+    * A felhasználó ne tárolhasson a felhasználó nevén kívűl más adatát eltárolni, illetve felhasználó ne tárolhasson preset-eken kívűl más adatot
     * Felhasználót ne lehessen azonosítani
     * Nem szabad, hogy lefagyjon az alkalmazás
     * Tilos trágár, explicit felhasználónevet választani a felhasználónak a bejelentkezésnél
@@ -103,7 +103,7 @@
             * 1.: A főoldalon a bal oldali sávban ki kell választani a harmadik ikont és ott lehet a képet átkonvertálni doc, pdf, vagy docx formátumú fájlá    
         * Kép letöltése:
             * 1.: A felhasználó elvégzi a szükséges változtatásokat a képpel
-            * 2.: Rá kattint a download gombra aminek következtében az oldal letölti az elkészült képet
+            * 2.: Rá kattint a download gombra Aminek következtében a felhasználó le tudja tölteni a képet
     * Fejlesztő:
         * A fejlesztő végre tudja hajtani azokat a dolgokat mint a felhasználó
         * A weboldal kódján tud változtatni és tesztelni
@@ -115,14 +115,15 @@
 
 ---
 ## 6. Fizikai környezet
-* Az alkalmazás web platformra készül így különféle eszközökön is lehet használni ha van rajtuk böngésző
+* Az alkalmazás web platformra készül így különféle eszközökön lehet használni ha van rajtuk böngésző és internet kapcsolat
 * Operációs rendszer független
 * Nincsenek megvásárolt komponenseink
-* Van tűzfal a hálózaton és minden portot is engedélyez
+* Van tűzfal a hálózaton és minden portot engedélyez
 
 * Fejlesztési környezet:
     * Visual Studio Code
     * Git
+    * Pycharm
 
 ---
 ## 7. Absztrakt domain modell
