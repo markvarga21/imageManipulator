@@ -2,6 +2,28 @@
 ## 1. A rendszer célja
 ---
 ## 2. Projektterv
+### Projektszerepkörök, felelősségek:
+* Scrum master: Varga József-Márk, Bódi András, Cserés Gábor
+* Product owner: Varga József-Márk, Bódi András, Cserés Gábor
+
+### Projektmunkások és felelőségek:
+
+* Backend munkálatok:
+    * Varga József-Márk
+         * Feladata a funkciók létrehozása illetve a preset-ek elmentése
+* Frontend:
+    * Bódi András, Cserés Gábor
+         * Feladatuk az elkészült képernyőtervek alapján létre hozni a weboldal megjelenését
+### Ütemterv:
+
+|          Funkció        |Feladat|Prioritás|Becslés|Aktuális becslés|Eltelt idő|Hátralévő idő|
+|          :----:         |:----: |  :----: | :----:|     :----:     |  :----:  |    :----:   |
+|Követelmény specifikáció |       |0        |7      |7               |7     |       0     |
+|Funkcionális specifikáció|       |0        |7      |7           |7     |   0     |
+|       Rendszerterv      |       |0        |7      |7           |7     |   0     |
+|         Frontend        |       |2        |-      |-               |0     |   -     |
+|         Backend         |       |2        |-      |-           |0     |   -     |
+
 ---
 ## 3. Üzleti folyamatok modellje
 * Üzleti szereplők
@@ -18,10 +40,91 @@
 ![Flowchart](../resources/flowChart.png)
 ---
 ## 4. Követelmények
+* Funkcionális követelmények:
+    * Felhasználó/vendég be tudjon lépni a felhasználónevét használva
+    * Telefonon és számitógépen is lehessen használni
+    * Minden internetes keresőn elérhető legyen
+    * Mindig elérhető legyen az oldal
+    * Egyszerűen legyen kezelhető az oldal  
+    * Az oldal alkalmazkodjon a kijelző méretéhez
+    * A felhasználó tudjon képeket feltölteni az oldalra
+    * Tudja a kép kontrasztját javítani 
+    * Tudja a kép élességét feljavítani 
+    * Tudja a kép homályosságát javítani
+    * Tudja a fényességet csökkenteni
+    * Tudja a fényességet növelni
+    * Át tudja méretezni a képet 
+    * Ki tudjon nyerni a képből karaktert 
+    * A felhasználó át tudja convertálni a képet: doc pdf stb. formátummá
+    * A felhasználó le tudja szedni a hátteret  
+    * A felhasználó hozzá tudjon adni hátteret a képhez
+    * A felhasználó le tudja menteni a saját preset-jeit
+    * A felhasználó le tudja menteni az elkészült képet a változtatásokkal
+
+* Nem funkcionális követelmények:
+    * A felhasználó ne tárolhasson a felhasználó nevén kívűl más adatát eltárolni, illetve felhasználó ne tárolhasson preset-eken kívűl más adatot
+    * Felhasználót ne lehessen azonosítani
+    * Nem szabad, hogy lefagyjon az alkalmazás
+    * Tilos trágár, explicit felhasználónevet választani a felhasználónak a bejelentkezésnél
+    * Ne lehessen tárolni a felhasználó képeit, hiszen az a GDPR bizonyos szabályaival szembe menne.
+
+* Törvényi előírások, szabványok:
+    * GDPR-nek való megfelelés.
+
 ---
 ## 5. Funkcionális terv
+* A webalkalmazásunknak az a célja, hogy azon embereket segítsük akik nem engedhetik meg maguknak a drága képszerkesztőket illetve ha nincs olyan erős gépük azokhoz. 
+* Rendszerszerepkörök:
+    * Felhasználó(user)
+    * Fejlesztő
+
+* Rendszerhasználati esetek és lefutásaik:
+    * Felhasználó(user):
+        * Bejelentkezés:
+            * 1.: A felhasználó megadja a felhasználónevét
+            * 2.: Rá kattint a bejelentkezésre
+            * 3.: A rendszer bejelentkezteti azzal a felhasználónévvel
+        * Kép feltöltése:
+            * 1.: A fő oldalon a felhasználó rá kattint az upload gombra
+            * 2.: Majd előkeresi a szerkesztésre váró képet
+            * 3.: Ha ez megvan és feltölti akkor a kép megjelenik a fő oldalon
+        * Kontraszt javítás: 
+            * 1.: A CONSTRAST szöveg alatti vonalon lehet egy pontot mozgatni amivel lehet a kontrasztot állítani
+        * Élesség javítás:
+            * 1.: A SHARPNESS szöveg alatti vonalon lehet egy pontot mozgatni amivel lehet az élességet állítani
+        * Fényesség csökkentése vagy növelése:
+            * 1.: A BRIGHTNESS szöveg alatti vonalon lehet egy pontot mozgatni amit ha balra húzunk akkor a fényesség csökken ha jobbra akkor növeljük
+        * Homályosság javítása:
+            * 1.: A BLUR szöveg alatti vonalon lehet egy pontot mozgatni amivel lehet a homályosságot állítani állítani
+        * Katakter kinyerés képből:
+            * 1.: A bal oldali sávnál ki kell választani a második ikont
+            * 2.: Azon a külön oldalon lehet a szöveget kinyerni a képből
+        * Kép átkonvertálása:
+            * 1.: A főoldalon a bal oldali sávban ki kell választani a harmadik ikont és ott lehet a képet átkonvertálni doc, pdf, vagy docx formátumú fájlá    
+        * Kép letöltése:
+            * 1.: A felhasználó elvégzi a szükséges változtatásokat a képpel
+            * 2.: Rá kattint a download gombra Aminek következtében a felhasználó le tudja tölteni a képet
+    * Fejlesztő:
+        * A fejlesztő végre tudja hajtani azokat a dolgokat mint a felhasználó
+        * A weboldal kódján tud változtatni és tesztelni
+        * Ha szükséges és igény van rá akkor új funkciókat tud hozzáadni a rendszerhez
+
+* Menü hierarchiák:
+    * Fő oldal: <br>
+![Home page](../resources/homePage.png)
+
 ---
 ## 6. Fizikai környezet
+* Az alkalmazás web platformra készül így különféle eszközökön lehet használni ha van rajtuk böngésző és internet kapcsolat
+* Operációs rendszer független
+* Nincsenek megvásárolt komponenseink
+* Van tűzfal a hálózaton és minden portot engedélyez
+
+* Fejlesztési környezet:
+    * Visual Studio Code
+    * Git
+    * Pycharm
+
 ---
 ## 7. Absztrakt domain modell
 ---
