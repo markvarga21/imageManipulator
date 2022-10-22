@@ -7,18 +7,16 @@
   * Tudja a fényességet csökkenteni
   * Tudja a fényességet növelni
   * Át tudja méretezni a képet
-  * Ki tudjon nyerni a képből karaktert és azt törölni a képről
   * A felhasználó át tudja convertálni a képet: doc, pdf, docx stb. formátummá 
   * A felhasználó le tudja szedni a hátteret
-  * A felhasználó hozzátudjon adni hátteret a képhez
+  * A felhasználó hozzá tudjon adni hátteret a képhez
   * A felhasználó egy felhasználónév megadásával tudjon bejelentkezni
   * A felhasználó le tudja menteni a saját preset-jeit
   * A felhasználó le tudja menteni az elkészült képet a változtatásokkal
-* Fontos, hogy a felület bárhol elérhető legyen, ott is ahol internet szolgáltatás nem elérhető, <br>
-  ezért webes felületen kívül bármilyen, kliens által választott okos eszközökre is telepíthető legyen. <br>
-* Annak érdekében, hogy átlátható mlegyen az alkalmazás, a design-ra elég nagy figyelmet szentelünk. <br>
-  A mostanában divatos reszponzív design-t fogjuk használni. <br>
-* A cél egy olyan oldal létrehozása amegy bárki számára bármikor rendelkezésre áll a neten.
+  * Internet szolgáltatás nélkül elérhető az oldal. <br>
+  * Annak érdekében, hogy átlátható legyen az alkalmazás, a design-ra elég nagy figyelmet szentelünk. <br>
+  * A mostanában divatos reszponzív design-t fogjuk használni. <br>
+  * A cél egy olyan oldal létrehozása amely bárki számára bármikor rendelkezésre áll a neten.
 ---
 ## 2. Projektterv
 ---
@@ -40,7 +38,7 @@
       amelyet weboldalakon sokat használnak. A weblapunk programozásához fog majd kelleni.
 
 * Backend:
-    * A backendhez python flaskot, reddist, opencv-t használunk.
+    * A backendhez python flaskot, redist, Pillowot, opencv-t használunk.
 ---
 ## 8. Architekturális terv
 ---
@@ -51,25 +49,25 @@
 ## 11. Tesztterv
 * Egy alkalmazás készítésekor, illetve kiadás előtt nagyon fontos szerepet játszanak a teszttervek.<br>
   A teszttervek által tudunk különféle funkciók helyes működéséről meggyőződni,<br>
-  és a különféle üzleti szolgáltatások hitelesítéséről is.<br>
+  és a különféle üzleti szolgáltatások hitelességéről is.<br>
   A szoftver kiadása előtt 2 tesztet kell végrehajtani, melyek az alpha illetve beta tesztek.
 
 * Alpha teszt
     * Fejlesztő csapat fogja elvégezni.
     * Ezen teszt során azt vizsgáljuk, hogy az alkalmazás hogyan reagál különboző böngészőkben,<br>
-     és az adott funkciók működneke.
+     és, hogy az adott funkciók működneke.
     * Ha azt látjuk, hogy az előző feltételek megfelelnek, akkor sikeres volt az alpha teszt, és jöhet majd a beta teszt.
 
 * Beta teszt
     * A beta tesztet a fejlesztő csapattól független, kívülálló emberek végzik el.
-    * Ennek a tesztnek célja az, hogy a felhasználóktól visszajelzést kapjunk, hogy a <br>
+    * Ennek a tesztnek célja az, hogy a felhasználóktól visszajelzést kapjunk, hogy <br>
       mennyire működőképes az alkalmazás.
 
 * Amennyiben hibás működésbe ütköznek a felhasználók, akkor egy tesztelési naplóban <br>
   levezetik a tapasztalataikat, és azt visszaküldik a fejlesztőknek, a fejlesztők pedig megoldják a hibát.
 
 * Tesztelésre használt eszközök
-  Böngészők: Google Chrome , Mozilla Firefox, Microsoft Edge, Opera <br>
+  Böngészők: Google Chrome , Mozilla Firefox, Microsoft Edge, Opera, Brave <br>
   Operációs rendszer: Windows 10, Ubuntu
 ---
 ## 12. Telepítési terv
@@ -82,5 +80,5 @@ megfogalmazott program-, és állomány módosítási igényeket is.
 A szoftveren havonta szeretnénk karbantartásokat végezni, ezen felül bármilyen
 felhasználói hibajelentés után azonnali helyreállítás jön. A szoftveren évente nagyobb
 frissítések, módosítások fordulhatnak elő.
-Idő elteltével új kategóriákat kell hozzáadni az apphoz, hogy fent tartsuk az
-érdeklődési szintet.
+Idő elteltével új funkcionalitásokat kell hozzáadni az apphoz, hogy fent tartsuk az
+érdeklődési szintet. 
