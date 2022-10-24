@@ -1,8 +1,8 @@
 from PIL import Image, ImageDraw
 
-from util.cleaner_service import delete_temp_files
+from service.cleaner_service import delete_temp_files
 from util.temp_file_creator import return_temp_file
-from util.value_mapper import CONTRAST_FRONTEND_MIN, CONTRAST_FRONTEND_MAX, COLOR_FRONTEND_MAX, COLOR_FRONTEND_MIN, \
+from util.mapping.value_mapper import CONTRAST_FRONTEND_MIN, CONTRAST_FRONTEND_MAX, COLOR_FRONTEND_MAX, COLOR_FRONTEND_MIN, \
     BRIGHTNESS_FRONTEND_MIN, BRIGHTNESS_FRONTEND_MAX, SHARPNESS_FRONTEND_MIN, SHARPNESS_FRONTEND_MAX, BLUR_FRONTEND_MIN, \
     BLUR_FRONTEND_MAX
 

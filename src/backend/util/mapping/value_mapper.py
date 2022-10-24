@@ -1,4 +1,4 @@
-from util.ValueRange import ValueRange
+from dto.ValueRange import ValueRange
 
 CONTRAST_FRONTEND_MIN = -10
 CONTRAST_FRONTEND_MAX = 10
