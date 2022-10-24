@@ -1,3 +1,5 @@
+from util.ValueRange import ValueRange
+
 CONTRAST_FRONTEND_MIN = -10
 CONTRAST_FRONTEND_MAX = 10
 CONTRAST_PILLOW_MAX = 2.0
@@ -13,50 +15,40 @@ BRIGHTNESS_FRONTEND_MAX = 10
 BRIGHTNESS_PILLOW_MAX = 2.0
 BRIGHTNESS_PILLOW_MIN = 0.5
 
+SHARPNESS_FRONTEND_MIN = 0
+SHARPNESS_FRONTEND_MAX = 20
+SHARPNESS_PILLOW_MAX = 2.0
+SHARPNESS_PILLOW_MIN = 0.5
 
-def map_contrast_value_to_pillow_value(value):
-    if value == 0:
+BLUR_FRONTEND_MIN = 0
+BLUR_FRONTEND_MAX = 20
+BLUR_PILLOW_MAX = 2.0
+BLUR_PILLOW_MIN = 0.0
+
+VALUES = {
+    'color': ValueRange(COLOR_FRONTEND_MIN, COLOR_FRONTEND_MAX, COLOR_PILLOW_MIN, COLOR_PILLOW_MAX),
+    'contrast': ValueRange(CONTRAST_FRONTEND_MIN, CONTRAST_FRONTEND_MAX, CONTRAST_PILLOW_MIN, CONTRAST_PILLOW_MAX),
+    'sharpness': ValueRange(SHARPNESS_FRONTEND_MIN, SHARPNESS_FRONTEND_MAX, SHARPNESS_PILLOW_MIN, SHARPNESS_PILLOW_MAX),
+    'brightness': ValueRange(BRIGHTNESS_FRONTEND_MIN, BRIGHTNESS_FRONTEND_MAX, BRIGHTNESS_PILLOW_MIN, BRIGHTNESS_PILLOW_MAX),
+    'blur': ValueRange(BLUR_FRONTEND_MIN, BLUR_FRONTEND_MAX, BLUR_PILLOW_MIN, BLUR_PILLOW_MAX)
+}
+
+
+def map_value(retouch_type, value):
+    if value == 0 and retouch_type != 'blur':
         print(f'Old value: {value}, new value: {1}')
         return 1.0
-    new_value = map_value(value,
-                          CONTRAST_FRONTEND_MIN,
-                          CONTRAST_FRONTEND_MAX,
-                          CONTRAST_PILLOW_MIN,
-                          CONTRAST_PILLOW_MAX)
-
-    print(f'Old value: {value}, new value: {new_value}')
+    if value == 0 and retouch_type == 'blur':
+        return 0.0
+    new_value = map_ranges(value,
+                           VALUES[retouch_type].frontend_min,
+                           VALUES[retouch_type].frontend_max,
+                           VALUES[retouch_type].pillow_min,
+                           VALUES[retouch_type].pillow_max)
     return new_value
 
 
-def map_brightness_value_to_pillow_value(value):
-    if value == 0:
-        print(f'Old value: {value}, new value: {1}')
-        return 1.0
-    new_value = map_value(value,
-                          BRIGHTNESS_FRONTEND_MIN,
-                          BRIGHTNESS_FRONTEND_MAX,
-                          BRIGHTNESS_PILLOW_MIN,
-                          BRIGHTNESS_PILLOW_MAX)
-
-    print(f'Old value: {value}, new value: {new_value}')
-    return new_value
-
-
-def map_color_value_to_pillow_value(value):
-    if value == 0:
-        print(f'Old value: {value}, new value: {1}')
-        return 1.0
-    new_value = map_value(value,
-                          COLOR_FRONTEND_MIN,
-                          COLOR_FRONTEND_MAX,
-                          COLOR_PILLOW_MIN,
-                          COLOR_PILLOW_MAX)
-
-    print(f'Old value: {value}, new value: {new_value}')
-    return new_value
-
-
-def map_value(value, old_min, old_max, new_min, new_max):
+def map_ranges(value, old_min, old_max, new_min, new_max):
     old_range = (old_max - old_min)
     new_range = (new_max - new_min)
     new_value = (((value - old_min) * new_range) / old_range) + new_min

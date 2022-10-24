@@ -2,7 +2,8 @@ from flask import Flask, request, send_file
 
 from service.retouch_service import get_retouch_image_file, retouch_image_all_in_one
 from util.image_converter import convert_string_to_pillow_image
-from util.value_mapper import CONTRAST_FRONTEND_MAX, CONTRAST_FRONTEND_MIN, COLOR_FRONTEND_MIN, COLOR_FRONTEND_MAX
+from util.value_mapper import CONTRAST_FRONTEND_MAX, CONTRAST_FRONTEND_MIN, COLOR_FRONTEND_MIN, COLOR_FRONTEND_MAX, \
+    SHARPNESS_FRONTEND_MIN, SHARPNESS_FRONTEND_MAX, BLUR_FRONTEND_MIN, BLUR_FRONTEND_MAX
 
 app = Flask(__name__)
 
@@ -23,22 +24,42 @@ def get_modified_image():
 
 @app.route('/getMaxContrastValue', methods=['GET'])
 def get_max_contrast():
-    return CONTRAST_FRONTEND_MAX
+    return str(CONTRAST_FRONTEND_MAX)
 
 
 @app.route('/getMinContrastValue', methods=['GET'])
 def get_min_contrast():
-    return CONTRAST_FRONTEND_MIN
+    return str(CONTRAST_FRONTEND_MIN)
 
 
 @app.route('/getMinColorValue', methods=['GET'])
 def get_min_color():
-    return COLOR_FRONTEND_MIN
+    return str(COLOR_FRONTEND_MIN)
 
 
 @app.route('/getMaxColorValue', methods=['GET'])
 def get_max_color():
-    return COLOR_FRONTEND_MAX
+    return str(COLOR_FRONTEND_MAX)
+
+
+@app.route('/getMinSharpnessValue', methods=['GET'])
+def get_min_sharpness():
+    return str(SHARPNESS_FRONTEND_MIN)
+
+
+@app.route('/getMaxSharpnessValue', methods=['GET'])
+def get_max_sharpness():
+    return str(SHARPNESS_FRONTEND_MAX)
+
+
+@app.route('/getMinBlurValue', methods=['GET'])
+def get_min_blur():
+    return str(BLUR_FRONTEND_MIN)
+
+
+@app.route('/getMaxBlurValue', methods=['GET'])
+def get_max_blur():
+    return str(BLUR_FRONTEND_MAX)
 
 
 @app.route('/getModifiedImageAllInOne', methods=['GET'])
