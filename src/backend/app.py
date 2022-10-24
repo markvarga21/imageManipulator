@@ -1,18 +1,37 @@
 from flask import Flask, request, send_file
 
-from service.retouch_service import get_retouch_image_file
+from service.retouch_service import get_retouch_image_file, retouch_image_all_in_one
 from util.image_converter import convert_string_to_pillow_image
 
 app = Flask(__name__)
 
 
-@app.route('/getModifiedImage', methods=['GET'])
+@app.route('/getModifiedImageSeparate', methods=['GET'])
 def get_modified_image():
     file_str = request.files['file'].read()
     pillow_img = convert_string_to_pillow_image(file_str)
     manipulation_type = request.form['type']
     new_value = float(request.form['newValue'])
     retouched_file = get_retouch_image_file(pillow_img, manipulation_type, new_value)
+    if retouched_file is not None:
+        print(retouched_file.name)
+        return send_file(retouched_file.name, mimetype='image/jpeg')
+    else:
+        return 'Image is None!'
+
+
+@app.route('/getModifiedImageAllInOne', methods=['GET'])
+def get_modified_image_all_in_one():
+    file_str = request.files['file'].read()
+    pillow_img = convert_string_to_pillow_image(file_str)
+    retouch_values = {
+        'brightness': request.form['brightness'],
+        'contrast': request.form['contrast'],
+        'color': request.form['color'],
+        'sharpness': request.form['sharpness'],
+        'blur': request.form['blur']
+    }
+    retouched_file = retouch_image_all_in_one(pillow_image=pillow_img, values=retouch_values)
     if retouched_file is not None:
         print(retouched_file.name)
         return send_file(retouched_file.name, mimetype='image/jpeg')
