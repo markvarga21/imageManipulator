@@ -1,5 +1,7 @@
 from flask import Flask, request, send_file
 
+from service.login_service import register_user_in_service, log_in_user_in_service, logout_user_in_service
+from service.preset_saver_service import save_user_preset
 from service.retouch_service import get_retouch_image_file, retouch_image_all_in_one
 from util.mapping.image_converter import convert_string_to_pillow_image
 from util.mapping.value_mapper import CONTRAST_FRONTEND_MAX, CONTRAST_FRONTEND_MIN, COLOR_FRONTEND_MIN, COLOR_FRONTEND_MAX, \
@@ -79,6 +81,36 @@ def get_min_blur():
 @app.route('/getMaxBlurValue', methods=['GET'])
 def get_max_blur():
     return str(BLUR_FRONTEND_MAX)
+
+
+@app.route('/registerUser', methods=['POST'])
+def register_user():
+    args = request.args
+    args_dict = args.to_dict()
+    return register_user_in_service(args_dict)
+
+
+@app.route('/loginUser', methods=['POST', 'GET'])
+def login_user():
+    args = request.args
+    args_dict = args.to_dict()
+    return log_in_user_in_service(args_dict)
+
+
+@app.route('/logoutUser', methods=['DELETE'])
+def logout_user():
+    args = request.args
+    args_dict = args.to_dict()
+    return logout_user_in_service(args_dict)
+
+
+@app.route('/savePreset', methods=['POST'])
+def save_preset():
+    content_type = request.headers.get('Content-Type')
+    if content_type == 'application/json':
+        json = request.json
+        return save_user_preset(json)
+    return 'Content-Type application/json not supported!'
 
 
 if __name__ == '__main__':
