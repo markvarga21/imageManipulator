@@ -2,11 +2,12 @@ from flask import Flask, request, send_file
 
 from service.retouch_service import get_retouch_image_file, retouch_image_all_in_one
 from util.image_converter import convert_string_to_pillow_image
+from util.value_mapper import CONTRAST_FRONTEND_MAX, CONTRAST_FRONTEND_MIN, COLOR_FRONTEND_MIN, COLOR_FRONTEND_MAX
 
 app = Flask(__name__)
 
 
-@app.route('/getModifiedImageSeparate', methods=['GET'])
+@app.route('/getModifiedImageSeparate', methods=['GET', 'POST'])
 def get_modified_image():
     file_str = request.files['file'].read()
     pillow_img = convert_string_to_pillow_image(file_str)
@@ -18,6 +19,26 @@ def get_modified_image():
         return send_file(retouched_file.name, mimetype='image/jpeg')
     else:
         return 'Image is None!'
+
+
+@app.route('/getMaxContrastValue', methods=['GET'])
+def get_max_contrast():
+    return CONTRAST_FRONTEND_MAX
+
+
+@app.route('/getMinContrastValue', methods=['GET'])
+def get_min_contrast():
+    return CONTRAST_FRONTEND_MIN
+
+
+@app.route('/getMinColorValue', methods=['GET'])
+def get_min_color():
+    return COLOR_FRONTEND_MIN
+
+
+@app.route('/getMaxColorValue', methods=['GET'])
+def get_max_color():
+    return COLOR_FRONTEND_MAX
 
 
 @app.route('/getModifiedImageAllInOne', methods=['GET'])

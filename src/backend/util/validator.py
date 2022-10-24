@@ -20,6 +20,12 @@ def validate_new_value_for_retouch_type(retouch_type, new_value):
     if retouch_type == 'contrast':
         if new_value < -10 or new_value > 10:
             return False
+    if retouch_type == 'color':
+        if new_value < -10 or new_value > 10:
+            return False
+    if retouch_type == 'brightness':
+        if new_value < -10 or new_value > 10:
+            return False
     return True
 
 
