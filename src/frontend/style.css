@@ -1,0 +1,36 @@
+#topBar{
+    height: 10vh;
+    background-color: black;
+    color: white;
+    width: 99vw;
+}
+td.first{
+    width: 6vw;
+}
+
+td.second{
+    width: 55vw;
+}
+
+td.fifth{
+    text-align: right;
+}
+
+#ocrPanel{
+    width: 6vw;
+    background-color: gray;
+}
+
+td.icon{
+    height: 10vh;
+}
+
+td.last{
+    height: 54vh;
+    align-items: top;
+}
+
+#mainImaginePanel{
+    background-color: darkslategray;
+    width: 65vw;
+}
