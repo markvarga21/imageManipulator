@@ -1,7 +1,7 @@
-from flask import Flask, request, send_file
+from flask import Flask, request, send_file, jsonify
 
 from service.login_service import register_user_in_service, log_in_user_in_service, logout_user_in_service
-from service.preset_saver_service import save_user_preset
+from service.preset_service import save_user_preset, get_presets_for_user_in_service, get_preset_for_user_in_service
 from service.retouch_service import get_retouch_image_file, retouch_image_all_in_one
 from util.mapping.image_converter import convert_string_to_pillow_image
 from util.mapping.value_mapper import CONTRAST_FRONTEND_MAX, CONTRAST_FRONTEND_MIN, COLOR_FRONTEND_MIN, COLOR_FRONTEND_MAX, \
@@ -112,6 +112,19 @@ def save_preset():
         return save_user_preset(json)
     return 'Content-Type application/json not supported!'
 
+
+@app.route('/getPresets', methods=['GET'])
+def get_presets_for_user():
+    d = request.args
+    preset_dict = get_presets_for_user_in_service(d)
+    return jsonify(preset_dict)
+
+
+@app.route('/getPreset', methods=['GET'])
+def get_preset_for_user_and_preset_name():
+    d = request.args
+    preset_dict = get_preset_for_user_in_service(d)
+    return jsonify(preset_dict)
 
 if __name__ == '__main__':
     app.run(debug=True)

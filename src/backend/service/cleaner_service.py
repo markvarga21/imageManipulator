@@ -3,7 +3,7 @@ import tempfile
 import glob
 
 
-def delete_temp_files(suffix):
+def delete_temp_files(suffix: str) -> None:
     temp_dir = tempfile.gettempdir()
     file_list = glob.glob(f'{temp_dir}\IMAGE_MANIPULATOR*{suffix}', recursive=True)
     for file in file_list:

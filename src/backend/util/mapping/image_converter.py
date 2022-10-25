@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 
-def convert_string_to_pillow_image(image_str):
+def convert_string_to_pillow_image(image_str: str) -> Image:
     file_bytes = np.fromstring(image_str, np.uint8)
     decoded_image = cv2.imdecode(file_bytes, cv2.IMREAD_UNCHANGED)
     converted_image = cv2.cvtColor(decoded_image, cv2.COLOR_BGR2RGB)
@@ -11,7 +11,7 @@ def convert_string_to_pillow_image(image_str):
     return pillow_image
 
 
-def convert_string_to_cv2_image(image_str):
+def convert_string_to_cv2_image(image_str: str):
     file_bytes = np.fromstring(image_str, np.uint8)
     decoded_image = cv2.imdecode(file_bytes, cv2.IMREAD_UNCHANGED)
     converted_image = cv2.cvtColor(decoded_image, cv2.COLOR_BGR2RGB)

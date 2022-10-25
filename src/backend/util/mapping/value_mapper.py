@@ -34,7 +34,7 @@ VALUES = {
 }
 
 
-def map_value(retouch_type, value):
+def map_value_from_frontend_to_pillow(retouch_type: str, value: float) -> float:
     if value == 0 and retouch_type != 'blur':
         print(f'Old value: {value}, new value: {1}')
         return 1.0
@@ -48,7 +48,21 @@ def map_value(retouch_type, value):
     return new_value
 
 
-def map_ranges(value, old_min, old_max, new_min, new_max):
+def map_value_from_pillow_to_frontend(retouch_type: str, value: float) -> float:
+    if value == 0 and retouch_type != 'blur':
+        print(f'Old value: {value}, new value: {1}')
+        return 1.0
+    if value == 0 and retouch_type == 'blur':
+        return 0.0
+    new_value = map_ranges(value,
+                           VALUES[retouch_type].pillow_min,
+                           VALUES[retouch_type].pillow_max,
+                           VALUES[retouch_type].frontend_min,
+                           VALUES[retouch_type].frontend_max)
+    return new_value
+
+
+def map_ranges(value: float, old_min: float, old_max: float, new_min: float, new_max: float) -> float:
     old_range = (old_max - old_min)
     new_range = (new_max - new_min)
     new_value = (((value - old_min) * new_range) / old_range) + new_min

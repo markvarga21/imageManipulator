@@ -1,12 +1,14 @@
+from tempfile import TemporaryFile
+
 from PIL import ImageEnhance, ImageFilter, Image
 
 from service.cleaner_service import delete_temp_files
 from util.temp_file_creator import return_temp_file
 from util.validator.validator import get_error_image_file, validate_new_value_for_retouch_type
-from util.mapping.value_mapper import map_value, VALUES
+from util.mapping.value_mapper import map_value_from_frontend_to_pillow, VALUES
 
 
-def get_retouch_image_file(pillow_img, retouch_type, new_value):
+def get_retouch_image_file(pillow_img: Image, retouch_type: str, new_value: float) -> TemporaryFile:
     delete_temp_files('.jpeg')
     if not validate_new_value_for_retouch_type(retouch_type=retouch_type, new_value=new_value):
         error_message = f'Invalid {retouch_type} value: {new_value}\n' \
@@ -21,7 +23,7 @@ def get_retouch_image_file(pillow_img, retouch_type, new_value):
     elif retouch_type == 'sharpness':
         enhancer = ImageEnhance.Sharpness(pillow_img)
     elif retouch_type == 'blur':
-        mapped_value = map_value(retouch_type, new_value)
+        mapped_value = map_value_from_frontend_to_pillow(retouch_type, new_value)
         blured_image = pillow_img.filter(ImageFilter.GaussianBlur(mapped_value))
         temp_file = return_temp_file('.jpeg')
         blured_image.save(temp_file)
@@ -29,12 +31,12 @@ def get_retouch_image_file(pillow_img, retouch_type, new_value):
     else:
         return f'Type {retouch_type} not recognised!'
     temp_file = return_temp_file('.jpeg')
-    mapped_value = map_value(retouch_type, new_value)
+    mapped_value = map_value_from_frontend_to_pillow(retouch_type, new_value)
     enhancer.enhance(mapped_value).save(temp_file)
     return temp_file
 
 
-def retouch_image_all_in_one(pillow_image, values):
+def retouch_image_all_in_one(pillow_image: Image, values: dict) -> TemporaryFile:
     delete_temp_files('.jpeg')
     for t in values.keys():
         v = float(values[t])
@@ -43,11 +45,11 @@ def retouch_image_all_in_one(pillow_image, values):
                             f'Valid range: [{VALUES[t].frontend_min}, {VALUES[t].frontend_max}]'
             return get_error_image_file(error_message)
 
-    mapped_brightness_value = map_value('brightness', float(values['brightness']))
-    mapped_contrast_value = map_value('contrast', float(values['contrast']))
-    mapped_color_value = map_value('color', float(values['color']))
-    mapped_sharpness_value = map_value('sharpness', float(values['sharpness']))
-    mapped_blur_value = map_value('blur', float(values['blur']))
+    mapped_brightness_value = map_value_from_frontend_to_pillow('brightness', float(values['brightness']))
+    mapped_contrast_value = map_value_from_frontend_to_pillow('contrast', float(values['contrast']))
+    mapped_color_value = map_value_from_frontend_to_pillow('color', float(values['color']))
+    mapped_sharpness_value = map_value_from_frontend_to_pillow('sharpness', float(values['sharpness']))
+    mapped_blur_value = map_value_from_frontend_to_pillow('blur', float(values['blur']))
 
     brightness_enhancer = ImageEnhance.Brightness(pillow_image)
     b_img = brightness_enhancer.enhance(mapped_brightness_value)
@@ -65,5 +67,3 @@ def retouch_image_all_in_one(pillow_image, values):
     temp_file = return_temp_file('.jpeg')
     blured_image.save(temp_file)
     return temp_file
-
-

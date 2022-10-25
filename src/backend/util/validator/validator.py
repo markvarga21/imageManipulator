@@ -1,3 +1,5 @@
+from tempfile import TemporaryFile
+
 from PIL import Image, ImageDraw
 
 from service.cleaner_service import delete_temp_files
@@ -7,7 +9,7 @@ from util.mapping.value_mapper import CONTRAST_FRONTEND_MIN, CONTRAST_FRONTEND_M
     BLUR_FRONTEND_MAX
 
 
-def get_error_image_file(title):
+def get_error_image_file(title: str) -> TemporaryFile:
     delete_temp_files('.jpeg')
     error_image = Image.open('resources/error.jpeg')
     resized_image = error_image.resize((200, 200))
@@ -19,7 +21,7 @@ def get_error_image_file(title):
     return temp_file
 
 
-def validate_new_value_for_retouch_type(retouch_type, new_value):
+def validate_new_value_for_retouch_type(retouch_type: str, new_value: float) -> bool:
     if retouch_type == 'contrast':
         if new_value < CONTRAST_FRONTEND_MIN or new_value > CONTRAST_FRONTEND_MAX:
             return False
