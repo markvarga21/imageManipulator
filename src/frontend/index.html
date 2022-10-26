@@ -4,11 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./app.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Image manipulator</title>
 </head>
 <body>
-    
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+        <li><a href="#"></a></li>
+        <li><a href="#"><img src="resources/retouchButton.svg" width="50vw" height="50vw"></a></li>
+        <li><a href="#"><img src="resources/textExtractIcon.svg" width="50vw" height="50vw"></a></li>
+        <li><a href="#"><img src="resources/backremoveIcon.svg" width="50vw" height="50vw"></a></li>
+        </ul>
+    </div>
+    <div class="photo_rt">
+        <h2><img src="resources/retouchButton.svg" width="30" height="30">Photo retouch</h2> </br>
+        <div class="contrast">
+            <i>CONTRAST</i>
+            <div class="contrast-slider">
+                <input type="range" min="1" max="100" value="50" id="contrast-slider">
+                <div id="contrast-value">0</div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="brightness">
+            <i>BRIGHTNESS</i>
+            <div class="brightness-slider">
+                <input type="range" min="1" max="100" value="50" id="brightness-slider">
+                <div id="brightness-value">0</div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="sharpness">
+            <i>SHARPNESS</i>
+            <div class="sharpness-slider">
+                <input type="range" min="1" max="100" value="50" id="sharpness-slider">
+                <div id="sharpness-value">0</div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="color">
+            <i>COLOR</i>
+            <div class="color-slider">
+                <input type="range" min="1" max="100" value="50" id="color-slider">
+                <div id="color-value">0</div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="blur">
+            <i>BLUR</i>
+            <div class="blur-slider">
+                <input type="range" min="1" max="100" value="50" id="blur-slider">
+                <div id="blur-value">0</div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script> 
 </body>
 </html>
