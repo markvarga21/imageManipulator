@@ -32,7 +32,7 @@ td.forth{
 
 
 td.empty{
-    width: 4vw;
+    width: 3.3vw;
 }
 
 td.fifth{
@@ -63,6 +63,12 @@ td.last{
 #mainImaginePanel{
     background-color: darkslategray;
     width: 65vw;
+    text-align: center;
+    
+}
+
+#inputPicture{
+    height: 65vh;
 }
 
 #home{
@@ -78,13 +84,11 @@ td.last{
 }
 
 #upload{
-    
     width: 3vw;
     height: 3vw;
 }
 
 #download{
-    
     width: 3vw;
     height: 3vw;
 }
