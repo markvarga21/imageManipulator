@@ -19,7 +19,9 @@ td.third{
     text-align: center;
     vertical-align: middle;
     font-size: x-large;
+    border-color: azure;
 }
+
 
 td.fifth{
     text-align: right;
