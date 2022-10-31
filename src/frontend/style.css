@@ -64,7 +64,8 @@ td.last{
 #mainImaginePanel{
     background-color: darkslategray;
     width: 65vw;
-    text-align: center;
+    justify-content: center;
+    
     
 }
 
@@ -99,4 +100,31 @@ td.last{
    height: 3vw;
    background-color: white
 }
+
+#minusIconimg, #plusIconimg, #fullIconimg{
+    width: 3vw;
+    height: 3vh;
+}
+
+
+#picture{
+    width: 85vw;
+    text-align: center;
+}
+
+#minusIcontd, #plusIcontd{
+    width: 25vw;
+    text-align: right;
+}
+
+#minusIcontd + td{
+    width: 10vw;
+    text-align: center;
+}
+
+#plusIcontd{
+    text-align: left;
+}
+
+
 
