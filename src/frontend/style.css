@@ -65,6 +65,7 @@ td.last{
     background-color: darkslategray;
     width: 65vw;
     justify-content: center;
+    color: whitesmoke;
     
     
 }
@@ -126,5 +127,17 @@ td.last{
     text-align: left;
 }
 
+#fullIcontd{
+    width: 3vw;
+    text-align: left;
+}
+
+#plusIcontd{
+    width: 10vw;
+}
+
+table.upload, table.download, #minusIcontd + td, #fullIcontd + td{
+    text-transform: uppercase;
+}
 
 
