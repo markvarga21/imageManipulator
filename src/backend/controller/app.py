@@ -1,7 +1,9 @@
+import os
+
 from flask import Flask, request, send_file, jsonify
 
 from service.login_service import register_user_in_service, log_in_user_in_service, logout_user_in_service
-from service.ocr_service import return_extracted_text_for_image
+from service.ocr_service import return_extracted_text_for_image, save_pdf_for_cv2_image
 from service.preset_service import save_user_preset, get_presets_for_user_in_service, get_preset_for_user_in_service
 from service.retouch_service import get_retouch_image_file, retouch_image_all_in_one
 from util.mapping.image_converter import convert_string_to_pillow_image, convert_string_to_cv2_image
@@ -128,12 +130,24 @@ def get_preset_for_user_and_preset_name():
     return jsonify(preset_dict)
 
 
-@app.route('/getTxtFromImage', methods=['GET'])
-def get_pdf_from_image():
+@app.route('/getTextFromImage', methods=['GET'])
+def get_text_from_image():
     file_str = request.files['file'].read()
     cv2_img = convert_string_to_cv2_image(file_str)
     text_from_img = return_extracted_text_for_image(cv2_img)
     return text_from_img
+
+
+@app.route('/getPdfFromImage', methods=['GET'])
+def get_pdf_from_image():
+    file_str = request.files['file'].read()
+    size = int(request.form['size'])
+    r, g, b = int(request.form['r']), int(request.form['g']), int(request.form['b'])
+    user_name = request.form['userName']
+    cv2_img = convert_string_to_cv2_image(file_str)
+    relative_path = save_pdf_for_cv2_image(cv2_img=cv2_img, r=r, g=g, b=b, size=size, user_name=user_name)
+    absolute_path = os.path.join(os.getcwd(), relative_path)
+    return send_file(absolute_path, mimetype='application/pdf')
 
 
 if __name__ == '__main__':

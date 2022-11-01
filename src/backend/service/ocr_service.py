@@ -1,6 +1,10 @@
+from tempfile import TemporaryFile
+
 import pytesseract
 import cv2
 import numpy as np
+
+from service.pdf_creator_service import save_pdf_file_in_output_folder
 
 
 def return_extracted_text_for_image(cv2_img) -> str:
@@ -11,3 +15,9 @@ def return_extracted_text_for_image(cv2_img) -> str:
     dilated = cv2.dilate(gray_bitwise, kernel, cv2.BORDER_REFLECT)
     ret = pytesseract.image_to_string(dilated)
     return ret
+
+
+def save_pdf_for_cv2_image(cv2_img, r: int, g: int, b: int, size: int, user_name: str) -> str:
+    text = return_extracted_text_for_image(cv2_img=cv2_img)
+    path = save_pdf_file_in_output_folder(text=text, r=r, g=g, b=b, font_size=size, user_name=user_name)
+    return path
