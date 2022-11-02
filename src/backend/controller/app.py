@@ -1,9 +1,13 @@
+import os
+
 from flask import Flask, request, send_file, jsonify
 
 from service.login_service import register_user_in_service, log_in_user_in_service, logout_user_in_service
+from service.ocr_service import return_extracted_text_for_image, save_pdf_for_cv2_image, save_text_for_cv2_image, \
+    save_doc_for_cv2_image
 from service.preset_service import save_user_preset, get_presets_for_user_in_service, get_preset_for_user_in_service
 from service.retouch_service import get_retouch_image_file, retouch_image_all_in_one
-from util.mapping.image_converter import convert_string_to_pillow_image
+from util.mapping.image_converter import convert_string_to_pillow_image, convert_string_to_cv2_image
 from util.mapping.value_mapper import CONTRAST_FRONTEND_MAX, CONTRAST_FRONTEND_MIN, COLOR_FRONTEND_MIN, COLOR_FRONTEND_MAX, \
     SHARPNESS_FRONTEND_MIN, SHARPNESS_FRONTEND_MAX, BLUR_FRONTEND_MIN, BLUR_FRONTEND_MAX
 
@@ -90,7 +94,7 @@ def register_user():
     return register_user_in_service(args_dict)
 
 
-@app.route('/loginUser', methods=['POST', 'GET'])
+@app.route('/loginUser', methods=['POST'])
 def login_user():
     args = request.args
     args_dict = args.to_dict()
@@ -125,6 +129,50 @@ def get_preset_for_user_and_preset_name():
     d = request.args
     preset_dict = get_preset_for_user_in_service(d)
     return jsonify(preset_dict)
+
+
+@app.route('/getTextFromImage', methods=['GET'])
+def get_text_from_image():
+    file_str = request.files['file'].read()
+    cv2_img = convert_string_to_cv2_image(file_str)
+    text_from_img = return_extracted_text_for_image(cv2_img)
+    return text_from_img
+
+
+@app.route('/getPdfFileFromImage', methods=['GET'])
+def get_pdf_from_image():
+    file_str = request.files['file'].read()
+    size = int(request.form['size'])
+    r, g, b = int(request.form['r']), int(request.form['g']), int(request.form['b'])
+    user_name = request.form['userName']
+    cv2_img = convert_string_to_cv2_image(file_str)
+    relative_path = save_pdf_for_cv2_image(cv2_img=cv2_img, r=r, g=g, b=b, size=size, user_name=user_name)
+    absolute_path = os.path.join(os.getcwd(), relative_path)
+    return send_file(absolute_path, mimetype='application/pdf')
+
+
+@app.route('/getTxtFileFromImage', methods=['GET'])
+def get_text_file_from_image():
+    file_str = request.files['file'].read()
+    cv2_img = convert_string_to_cv2_image(file_str)
+    temp_file = save_text_for_cv2_image(cv2_img)
+    if temp_file is not None:
+        app.logger.debug(f'File name: {temp_file.name}')
+        return send_file(temp_file.name, mimetype='text/plain')
+    else:
+        return 'Text file is None!'
+
+
+@app.route('/getDocFileFromImage', methods=['GET'])
+def get_doc_file_from_image():
+    file_str = request.files['file'].read()
+    font_size = int(request.form['size'])
+    user_name = str(request.form['userName'])
+    cv2_img = convert_string_to_cv2_image(file_str)
+    relative_path = save_doc_for_cv2_image(cv2_img=cv2_img, font_size=font_size, user_name=user_name)
+    absolute_path = os.path.join(os.getcwd(), relative_path)
+    return send_file(absolute_path, mimetype='application/msword')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
