@@ -4,7 +4,9 @@ import pytesseract
 import cv2
 import numpy as np
 
+from service.cleaner_service import delete_temp_files
 from service.pdf_creator_service import save_pdf_file_in_output_folder
+from util.temp_file_creator import return_temp_file
 
 
 def return_extracted_text_for_image(cv2_img) -> str:
@@ -21,3 +23,12 @@ def save_pdf_for_cv2_image(cv2_img, r: int, g: int, b: int, size: int, user_name
     text = return_extracted_text_for_image(cv2_img=cv2_img)
     path = save_pdf_file_in_output_folder(text=text, r=r, g=g, b=b, font_size=size, user_name=user_name)
     return path
+
+
+def save_text_for_cv2_image(cv2_img) -> TemporaryFile:
+    delete_temp_files('.txt')
+    temp = return_temp_file('.txt')
+    text = return_extracted_text_for_image(cv2_img=cv2_img)
+    temp.write(text)
+    temp.close()
+    return temp
