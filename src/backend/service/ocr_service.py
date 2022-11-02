@@ -5,7 +5,8 @@ import cv2
 import numpy as np
 
 from service.cleaner_service import delete_temp_files
-from service.pdf_creator_service import save_pdf_file_in_output_folder
+from service.doc_creator import save_doc_file_in_output_folder
+from service.pdf_creator import save_pdf_file_in_output_folder
 from util.temp_file_creator import return_temp_file
 
 
@@ -32,3 +33,10 @@ def save_text_for_cv2_image(cv2_img) -> TemporaryFile:
     temp.write(text)
     temp.close()
     return temp
+
+
+def save_doc_for_cv2_image(cv2_img, font_size: int, user_name: str) -> TemporaryFile:
+    delete_temp_files('.doc')
+    text = return_extracted_text_for_image(cv2_img=cv2_img)
+    path = save_doc_file_in_output_folder(text=text, font_size=font_size, user_name=user_name)
+    return path
