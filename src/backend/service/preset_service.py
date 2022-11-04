@@ -8,7 +8,7 @@ RETOUCH_TYPE_NAMES = ['userName', 'name', 'contrast', 'blur', 'sharpness', 'brig
 
 def save_user_preset(preset_dict: dict) -> str:
     keys = preset_dict.keys()
-    if len(keys) is 0:
+    if len(keys) == 0:
         return 'No keys present!'
     if 'name' not in keys:
         return 'Name not defined!'
@@ -40,7 +40,7 @@ def save_user_preset(preset_dict: dict) -> str:
 
 def get_presets_for_user_in_service(d: dict) -> list:
     keys = d.keys()
-    if len(keys) is 0:
+    if len(keys) == 0:
         return []
     if 'userName' not in keys:
         return []
@@ -51,7 +51,7 @@ def get_presets_for_user_in_service(d: dict) -> list:
 
 def get_preset_for_user_in_service(d: dict) -> dict:
     keys = d.keys()
-    if len(keys) is 0:
+    if len(keys) == 0:
         return dict()
     if 'userName' not in keys:
         return dict()
