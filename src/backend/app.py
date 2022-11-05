@@ -14,23 +14,23 @@ from util.mapping.value_mapper import CONTRAST_FRONTEND_MAX, CONTRAST_FRONTEND_M
 app = Flask(__name__)
 
 
-@app.route('/getModifiedImageSeparate', methods=['GET', 'POST'])
+@app.route('/getModifiedImageSeparate', methods=['GET'])
 def get_modified_image():
     file_str = request.files['file'].read()
     pillow_img = convert_string_to_pillow_image(file_str)
     manipulation_type = request.form['type']
     new_value = float(request.form['newValue'])
-    retouched_file = get_retouch_image_file(pillow_img, manipulation_type, new_value)
-    if retouched_file is not None:
-        app.logger.debug(f'File name: {retouched_file.name}')
-        return send_file(retouched_file.name, mimetype='image/jpeg')
-    else:
-        return 'Image is None!'
+    user_name = request.form['userName']
+    relative_path = get_retouch_image_file(
+        pillow_img, manipulation_type, new_value, user_name=user_name)
+    absolute_path = os.path.join(os.getcwd(), relative_path)
+    return send_file(absolute_path, mimetype='image/jpeg')
 
 
 @app.route('/getModifiedImageAllInOne', methods=['GET'])
 def get_modified_image_all_in_one():
     file_str = request.files['file'].read()
+    user_name = str(request.form['userName'])
     pillow_img = convert_string_to_pillow_image(file_str)
     retouch_values = {
         'brightness': request.form['brightness'],
@@ -39,12 +39,10 @@ def get_modified_image_all_in_one():
         'sharpness': request.form['sharpness'],
         'blur': request.form['blur']
     }
-    retouched_file = retouch_image_all_in_one(pillow_image=pillow_img, values=retouch_values)
-    if retouched_file is not None:
-        app.logger.debug(f'File name: {retouched_file.name}')
-        return send_file(retouched_file.name, mimetype='image/jpeg')
-    else:
-        return 'Image is None!'
+    relative_path = retouch_image_all_in_one(
+        pillow_image=pillow_img, values=retouch_values, user_name=user_name)
+    absolute_path = os.path.join(os.getcwd(), relative_path)
+    return send_file(absolute_path, mimetype='image/jpeg')
 
 
 @app.route('/getMaxContrastValue', methods=['GET'])
@@ -143,10 +141,12 @@ def get_text_from_image():
 def get_pdf_from_image():
     file_str = request.files['file'].read()
     size = int(request.form['size'])
-    r, g, b = int(request.form['r']), int(request.form['g']), int(request.form['b'])
+    r, g, b = int(request.form['r']), int(
+        request.form['g']), int(request.form['b'])
     user_name = request.form['userName']
     cv2_img = convert_string_to_cv2_image(file_str)
-    relative_path = save_pdf_for_cv2_image(cv2_img=cv2_img, r=r, g=g, b=b, size=size, user_name=user_name)
+    relative_path = save_pdf_for_cv2_image(
+        cv2_img=cv2_img, r=r, g=g, b=b, size=size, user_name=user_name)
     absolute_path = os.path.join(os.getcwd(), relative_path)
     return send_file(absolute_path, mimetype='application/pdf')
 
@@ -154,13 +154,11 @@ def get_pdf_from_image():
 @app.route('/getTxtFileFromImage', methods=['GET'])
 def get_text_file_from_image():
     file_str = request.files['file'].read()
+    user_name = str(request.form['userName'])
     cv2_img = convert_string_to_cv2_image(file_str)
-    temp_file = save_text_for_cv2_image(cv2_img)
-    if temp_file is not None:
-        app.logger.debug(f'File name: {temp_file.name}')
-        return send_file(temp_file.name, mimetype='text/plain')
-    else:
-        return 'Text file is None!'
+    relative_path = save_text_for_cv2_image(cv2_img, user_name=user_name)
+    absolute_path = os.path.join(os.getcwd(), relative_path)
+    return send_file(absolute_path, mimetype='text/plain')
 
 
 @app.route('/getDocFileFromImage', methods=['GET'])
@@ -169,10 +167,11 @@ def get_doc_file_from_image():
     font_size = int(request.form['size'])
     user_name = str(request.form['userName'])
     cv2_img = convert_string_to_cv2_image(file_str)
-    relative_path = save_doc_for_cv2_image(cv2_img=cv2_img, font_size=font_size, user_name=user_name)
+    relative_path = save_doc_for_cv2_image(
+        cv2_img=cv2_img, font_size=font_size, user_name=user_name)
     absolute_path = os.path.join(os.getcwd(), relative_path)
     return send_file(absolute_path, mimetype='application/msword')
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host="0.0.0.0")

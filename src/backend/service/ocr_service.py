@@ -4,10 +4,13 @@ import pytesseract
 import cv2
 import numpy as np
 
-from service.cleaner_service import delete_temp_files
+import uuid
+
+import os
+
+from service.cleaner_service import delete_temp_files, clean_output_for_user
 from service.doc_creator import save_doc_file_in_output_folder
 from service.pdf_creator import save_pdf_file_in_output_folder
-from util.temp_file_creator import return_temp_file
 
 
 def return_extracted_text_for_image(cv2_img) -> str:
@@ -26,13 +29,16 @@ def save_pdf_for_cv2_image(cv2_img, r: int, g: int, b: int, size: int, user_name
     return path
 
 
-def save_text_for_cv2_image(cv2_img) -> TemporaryFile:
-    delete_temp_files('.txt')
-    temp = return_temp_file('.txt')
+def save_text_for_cv2_image(cv2_img, user_name: str) -> str:
+    clean_output_for_user(user_name=user_name)
+    save_id = uuid.uuid4()
+    name = f'OCR_{user_name}_{save_id}.txt'
+    path = os.path.join('resources', 'output', name)
     text = return_extracted_text_for_image(cv2_img=cv2_img)
-    temp.write(text)
-    temp.close()
-    return temp
+    print(path)
+    with open(path, 'w') as f:
+        f.write(text)
+    return path
 
 
 def save_doc_for_cv2_image(cv2_img, font_size: int, user_name: str) -> TemporaryFile:
