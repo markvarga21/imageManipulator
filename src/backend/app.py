@@ -2,6 +2,7 @@ import os
 
 from flask import Flask, request, send_file, jsonify
 from flask_cors import CORS, cross_origin
+from service.background_remove_service import remove_green_background
 
 from service.login_service import register_user_in_service, log_in_user_in_service, logout_user_in_service
 from service.ocr_service import return_extracted_text_for_image, save_pdf_for_cv2_image, save_text_for_cv2_image, \
@@ -194,6 +195,18 @@ def get_doc_file_from_image():
         cv2_img=cv2_img, font_size=font_size, user_name=user_name)
     absolute_path = os.path.join(os.getcwd(), relative_path)
     return send_file(absolute_path, mimetype='application/msword')
+
+
+@cross_origin()
+@app.route('/getPngFromImage', methods=['GET'])
+def get_png():
+    file_str = request.files['file'].read()
+    user_name = str(request.form['userName'])
+    cv2_img = convert_string_to_cv2_image(file_str)
+    relative_path = remove_green_background(
+        cv2_img=cv2_img, user_name=user_name)
+    absolute_path = os.path.join(os.getcwd(), relative_path)
+    return send_file(absolute_path, mimetype='image/png')
 
 
 if __name__ == '__main__':
