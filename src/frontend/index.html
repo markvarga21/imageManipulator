@@ -5,23 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
     <title>Image manipulator</title>
 </head>
 <body>
     <div class="sidebar">
         <ul class="sidebar-menu">
-        <li><a href="#"></a></li>
-        <li><a href="#"><img src="resources/retouchButton.svg" width="50vw" height="50vw"></a></li>
-        <li><a href="#"><img src="resources/textExtractIcon.svg" width="50vw" height="50vw"></a></li>
-        <li><a href="#"><img src="resources/backremoveIcon.svg" width="50vw" height="50vw"></a></li>
+            <button onclick="retouch(this)" class="button button1" onclick=""><img src="resources/retouchButton.svg" width="50vw" height="50vw"></button>
+            <button onclick="text_extraction(this)" class="button button1" onclick=""><img src="resources/textExtractIcon.svg" width="50vw" height="50vw"></button>
+            <button onclick="back_remove(this)" class="button button1" onclick=""><img src="resources/backremoveIcon.svg" width="50vw" height="50vw"></button>
         </ul>
     </div>
-    <div class="photo_rt">
-        <h2><img src="resources/retouchButton.svg" width="30" height="30">Photo retouch</h2> </br>
+    <div class="photo_rt" id="photo_rt">
+        <h2 class="title"><img class="title_pic" src="resources/retouchButton.svg" width="30" height="30">Photo retouch</h2> </br>
         <div class="contrast">
             <i>CONTRAST</i>
             <div class="contrast-slider">
-                <input type="range" min="1" max="100" value="50" id="contrast-slider">
+                <input type="range" min="-10" max="10" value="0" id="contrast-slider" step="0.1">
                 <div id="contrast-value">0</div>
             </div>
         </div>
@@ -31,7 +33,7 @@
         <div class="brightness">
             <i>BRIGHTNESS</i>
             <div class="brightness-slider">
-                <input type="range" min="1" max="100" value="50" id="brightness-slider">
+                <input type="range" min="-10" max="10" value="0" id="brightness-slider" step="0.1">
                 <div id="brightness-value">0</div>
             </div>
         </div>
@@ -41,7 +43,7 @@
         <div class="sharpness">
             <i>SHARPNESS</i>
             <div class="sharpness-slider">
-                <input type="range" min="1" max="100" value="50" id="sharpness-slider">
+                <input type="range" min="0" max="20" value="0" id="sharpness-slider" step="0.1">
                 <div id="sharpness-value">0</div>
             </div>
         </div>
@@ -51,7 +53,7 @@
         <div class="color">
             <i>COLOR</i>
             <div class="color-slider">
-                <input type="range" min="1" max="100" value="50" id="color-slider">
+                <input type="range" min="-10" max="10" value="0" id="color-slider" step="0.1">
                 <div id="color-value">0</div>
             </div>
         </div>
@@ -61,10 +63,40 @@
         <div class="blur">
             <i>BLUR</i>
             <div class="blur-slider">
-                <input type="range" min="1" max="100" value="50" id="blur-slider">
+                <input type="range" min="0" max="20" value="0" id="blur-slider" step="0.1">
                 <div id="blur-value">0</div>
             </div>
         </div>
+    </div>
+    <div hidden class="back_rem" id="back_rem">
+        <h2 class="title"><img class="title_pic" src="resources/retouchButton.svg" width="30" height="30">Background Remove</h2> </br>
+        <div class="minimum">
+            <i>Minimum</i>
+            <div class="minimum-slider">
+                <input type="range" min="-10" max="10" value="0" id="minimum-slider" step="0.1">
+                <div id="minimum-value">0</div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="maximum">
+            <i>Maximum</i>
+            <div class="maximum-slider">
+                <input type="range" min="-10" max="10" value="0" id="maximum-slider" step="0.1">
+                <div id="maximum-value">0</div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <p class="rem_p"> New background image </p>
+        <div class="cent"><button id="center" class="button button_rem_add">Add</button></div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <div class="cent"><button class="button button_rem_remove">REMOVE</button></div>
     </div>
     <script src="app.js"></script> 
 </body>
