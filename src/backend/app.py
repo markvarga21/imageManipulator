@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask, request, send_file, jsonify
+from flask_cors import CORS, cross_origin
 
 from service.login_service import register_user_in_service, log_in_user_in_service, logout_user_in_service
 from service.ocr_service import return_extracted_text_for_image, save_pdf_for_cv2_image, save_text_for_cv2_image, \
@@ -12,8 +13,11 @@ from util.mapping.value_mapper import CONTRAST_FRONTEND_MAX, CONTRAST_FRONTEND_M
     SHARPNESS_FRONTEND_MIN, SHARPNESS_FRONTEND_MAX, BLUR_FRONTEND_MIN, BLUR_FRONTEND_MAX
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
+@cross_origin()
 @app.route('/getModifiedImageSeparate', methods=['GET'])
 def get_modified_image():
     file_str = request.files['file'].read()
@@ -27,6 +31,7 @@ def get_modified_image():
     return send_file(absolute_path, mimetype='image/jpeg')
 
 
+@cross_origin()
 @app.route('/getModifiedImageAllInOne', methods=['GET'])
 def get_modified_image_all_in_one():
     file_str = request.files['file'].read()
@@ -45,46 +50,55 @@ def get_modified_image_all_in_one():
     return send_file(absolute_path, mimetype='image/jpeg')
 
 
+@cross_origin()
 @app.route('/getMaxContrastValue', methods=['GET'])
 def get_max_contrast():
     return str(CONTRAST_FRONTEND_MAX)
 
 
+@cross_origin()
 @app.route('/getMinContrastValue', methods=['GET'])
 def get_min_contrast():
     return str(CONTRAST_FRONTEND_MIN)
 
 
+@cross_origin()
 @app.route('/getMinColorValue', methods=['GET'])
 def get_min_color():
     return str(COLOR_FRONTEND_MIN)
 
 
+@cross_origin()
 @app.route('/getMaxColorValue', methods=['GET'])
 def get_max_color():
     return str(COLOR_FRONTEND_MAX)
 
 
+@cross_origin()
 @app.route('/getMinSharpnessValue', methods=['GET'])
 def get_min_sharpness():
     return str(SHARPNESS_FRONTEND_MIN)
 
 
+@cross_origin()
 @app.route('/getMaxSharpnessValue', methods=['GET'])
 def get_max_sharpness():
     return str(SHARPNESS_FRONTEND_MAX)
 
 
+@cross_origin()
 @app.route('/getMinBlurValue', methods=['GET'])
 def get_min_blur():
     return str(BLUR_FRONTEND_MIN)
 
 
+@cross_origin()
 @app.route('/getMaxBlurValue', methods=['GET'])
 def get_max_blur():
     return str(BLUR_FRONTEND_MAX)
 
 
+@cross_origin()
 @app.route('/registerUser', methods=['POST'])
 def register_user():
     args = request.args
@@ -92,6 +106,7 @@ def register_user():
     return register_user_in_service(args_dict)
 
 
+@cross_origin()
 @app.route('/loginUser', methods=['POST'])
 def login_user():
     args = request.args
@@ -99,6 +114,7 @@ def login_user():
     return log_in_user_in_service(args_dict)
 
 
+@cross_origin()
 @app.route('/logoutUser', methods=['DELETE'])
 def logout_user():
     args = request.args
@@ -106,6 +122,7 @@ def logout_user():
     return logout_user_in_service(args_dict)
 
 
+@cross_origin()
 @app.route('/savePreset', methods=['POST'])
 def save_preset():
     content_type = request.headers.get('Content-Type')
@@ -115,6 +132,7 @@ def save_preset():
     return 'Content-Type application/json not supported!'
 
 
+@cross_origin()
 @app.route('/getPresets', methods=['GET'])
 def get_presets_for_user():
     d = request.args
@@ -122,6 +140,7 @@ def get_presets_for_user():
     return jsonify(preset_dict)
 
 
+@cross_origin()
 @app.route('/getPreset', methods=['GET'])
 def get_preset_for_user_and_preset_name():
     d = request.args
@@ -129,6 +148,7 @@ def get_preset_for_user_and_preset_name():
     return jsonify(preset_dict)
 
 
+@cross_origin()
 @app.route('/getTextFromImage', methods=['GET'])
 def get_text_from_image():
     file_str = request.files['file'].read()
@@ -137,6 +157,7 @@ def get_text_from_image():
     return text_from_img
 
 
+@cross_origin()
 @app.route('/getPdfFileFromImage', methods=['GET'])
 def get_pdf_from_image():
     file_str = request.files['file'].read()
@@ -151,6 +172,7 @@ def get_pdf_from_image():
     return send_file(absolute_path, mimetype='application/pdf')
 
 
+@cross_origin()
 @app.route('/getTxtFileFromImage', methods=['GET'])
 def get_text_file_from_image():
     file_str = request.files['file'].read()
@@ -161,6 +183,7 @@ def get_text_file_from_image():
     return send_file(absolute_path, mimetype='text/plain')
 
 
+@cross_origin()
 @app.route('/getDocFileFromImage', methods=['GET'])
 def get_doc_file_from_image():
     file_str = request.files['file'].read()
