@@ -2,6 +2,7 @@ import os
 
 from flask import Flask, request, send_file, jsonify
 from flask_cors import CORS, cross_origin
+from service.background_remove_service import remove_and_replace_background
 from service.background_remove_service import remove_green_background
 
 from service.login_service import register_user_in_service, log_in_user_in_service, logout_user_in_service
@@ -205,6 +206,20 @@ def get_png():
     cv2_img = convert_string_to_cv2_image(file_str)
     relative_path = remove_green_background(
         cv2_img=cv2_img, user_name=user_name)
+    absolute_path = os.path.join(os.getcwd(), relative_path)
+    return send_file(absolute_path, mimetype='image/png')
+
+
+@cross_origin()
+@app.route('/getNewBackgroundImage', methods=['GET'])
+def get_removed_png():
+    front_str = request.files['front'].read()
+    front_cv2_img = convert_string_to_cv2_image(front_str)
+    back_str = request.files['back'].read()
+    back_pillow_img = convert_string_to_pillow_image(back_str)
+    user_name = str(request.form['userName'])
+    relative_path = remove_and_replace_background(
+        cv2_img=front_cv2_img, pillow_background=back_pillow_img, user_name=user_name)
     absolute_path = os.path.join(os.getcwd(), relative_path)
     return send_file(absolute_path, mimetype='image/png')
 
