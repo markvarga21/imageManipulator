@@ -68,6 +68,36 @@
             </div>
         </div>
     </div>
+    <div hidden class="back_rem" id="back_rem">
+        <h2 class="title"><img class="title_pic" src="resources/retouchButton.svg" width="30" height="30">Background Remove</h2> </br>
+        <div class="minimum">
+            <i>Minimum</i>
+            <div class="minimum-slider">
+                <input type="range" min="-10" max="10" value="0" id="minimum-slider" step="0.1">
+                <div id="minimum-value">0</div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="maximum">
+            <i>Maximum</i>
+            <div class="maximum-slider">
+                <input type="range" min="-10" max="10" value="0" id="maximum-slider" step="0.1">
+                <div id="maximum-value">0</div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <p class="rem_p"> New background image </p>
+        <div class="cent"><button id="center" class="button button_rem_add">Add</button></div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <div class="cent"><button class="button button_rem_remove">REMOVE</button></div>
+    </div>
     <script src="app.js"></script> 
 </body>
 </html>
