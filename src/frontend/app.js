@@ -42,3 +42,46 @@ bl_output.innerHTML = bl_slider.value;
 bl_slider.oninput = function() {
   bl_output.innerHTML = this.value;
 }
+
+let minimum_slider = document.getElementById("minimum-slider");
+let minimum_output = document.getElementById("minimum-value");
+minimum_output.innerHTML = minimum_slider.value;
+
+minimum_slider.oninput = function() {
+  minimum_output.innerHTML = this.value;
+}
+
+let maximum_slider = document.getElementById("maximum-slider");
+let maximum_output = document.getElementById("maximum-value");
+maximum_output.innerHTML = maximum_slider.value;
+
+maximum_slider.oninput = function() {
+  maximum_output.innerHTML = this.value;
+}
+///////////////////
+
+//buttons control
+
+let retouch = button => {
+  let photort = document.getElementById("photo_rt");
+  let hidden = photort.getAttribute("hidden");
+
+     photort.removeAttribute("hidden");
+
+  let back_rem = document.getElementById("back_rem");
+  hidden = back_rem.getAttribute("hidden");
+   
+    back_rem.setAttribute("hidden", "hidden");
+
+}
+let back_remove = button => {
+  let photort = document.getElementById("photo_rt");
+  let hidden = photort.getAttribute("hidden");
+
+    photort.setAttribute("hidden", "hidden");
+
+  let back_rem = document.getElementById("back_rem");
+  hidden = back_rem.getAttribute("hidden");
+     
+    back_rem.removeAttribute("hidden", "hidden");
+}
