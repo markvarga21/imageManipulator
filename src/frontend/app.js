@@ -73,6 +73,11 @@ let retouch = button => {
    
     back_rem.setAttribute("hidden", "hidden");
 
+  let text_extract = document.getElementById("text_extract");
+  hidden = text_extract.getAttribute("hidden");
+  
+      text_extract.setAttribute("hidden", "hidden");
+
 }
 let back_remove = button => {
   let photort = document.getElementById("photo_rt");
@@ -84,4 +89,104 @@ let back_remove = button => {
   hidden = back_rem.getAttribute("hidden");
      
     back_rem.removeAttribute("hidden", "hidden");
+
+  let text_extract = document.getElementById("text_extract");
+  hidden = text_extract.getAttribute("hidden");
+  
+      text_extract.setAttribute("hidden", "hidden");
+}
+
+let image = document.querySelector('#imagePreview');
+let imageSizeLabel = document.querySelector('.imageSizeLabel');
+let fullScreenDiv = document.querySelector('.fullScreen');
+
+const defaultSize = '800px';
+
+let imageWidth = image.naturalWidth;
+let imageHeight = image.naturalHeight;
+
+fullScreenDiv.onclick = function() {
+  image.setAttribute('width', defaultSize);
+  imageSizeLabel.innerHTML = '100%';
+}
+
+function zoomIn() {
+  image.setAttribute('width', String(imageWidth + 50));
+  image.setAttribute('height', String(imageWidth + 50));
+  const percentIndex = imageSizeLabel.innerHTML.indexOf('%');
+  let prevImageSizePercentage = Number(imageSizeLabel.innerHTML.substring(0, percentIndex));
+  imageSizeLabel.innerHTML = `${String(prevImageSizePercentage + 20)}%`;
+  imageWidth += 50;
+}
+
+function zoomOut() {
+  image.setAttribute('width', String(imageWidth - 50));
+  image.setAttribute('height', String(imageWidth - 50));
+  const percentIndex = imageSizeLabel.innerHTML.indexOf('%');
+  let prevImageSizePercentage = Number(imageSizeLabel.innerHTML.substring(0, percentIndex));
+  imageSizeLabel.innerHTML = `${String(prevImageSizePercentage - 20)}%`;
+  imageWidth -= 50;
+}
+
+function goToHome() {
+  console.log('Clicked on home button!');
+}
+
+let imageNameLabel = document.querySelector('.label');
+
+function makeImageNameEditable() {
+  const editable = imageNameLabel.getAttribute('contenteditable');
+  if (editable === 'true') {
+    imageNameLabel.setAttribute('contenteditable', 'false');
+  } else {
+    imageNameLabel.setAttribute('contenteditable', 'true');
+  }
+}
+
+function uploadImage() {
+  console.log('Image uploaded...');
+}
+
+function downloadImage() {
+  console.log('Image downloaded...');
+}
+
+function displayLoggedInUser() {
+  const userName = 'john';
+  alert(`Logged in as: ${userName}`);
+}
+
+let text_extraction = button => {
+  let photort = document.getElementById("photo_rt");
+  let hidden = photort.getAttribute("hidden");
+
+    photort.setAttribute("hidden", "hidden");
+
+  let back_rem = document.getElementById("back_rem");
+  hidden = back_rem.getAttribute("hidden");
+
+    back_rem.setAttribute("hidden", "hidden");
+
+    let text_extract = document.getElementById("text_extract");
+    hidden = text_extract.getAttribute("hidden");
+
+    text_extract.removeAttribute("hidden", "hidden");
+}
+
+let pdf_button = button => {
+  document.getElementById("pdf_b").style.background='#d9d9d9';
+  document.getElementById("txt_b").style.background='#27272f';
+  document.getElementById("doc_b").style.background='#27272f';
+}
+
+let txt_button = button => {
+  document.getElementById("pdf_b").style.background='#27272f';
+  document.getElementById("txt_b").style.background='#d9d9d9';
+  document.getElementById("doc_b").style.background='#27272f';
+}
+
+let doc_button = button => {
+  document.getElementById("pdf_b").style.background='#27272f';
+  document.getElementById("txt_b").style.background='#27272f';
+  document.getElementById("doc_b").style.background='#d9d9d9';
 }
