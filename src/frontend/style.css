@@ -159,3 +159,98 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 50%;
     cursor: pointer;
 }
+
+.page {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.topBar {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: stretch;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+}
+
+#homeButton {
+    background-color: transparent;
+    position: relative;
+    top: 15px;
+    left: 25px;  
+}
+
+#homeButton > img {
+    width: 60px;
+    cursor: pointer;
+}
+
+.imageName, .upload, .download {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    
+}
+
+.imageName > .label, .uploadLabel {
+    color: white;
+    position: relative;
+    font-size: 30pt;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+
+#editImageNameButton, #uploadImageButton, #profileButton {
+    width: 40px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#downloadImageButton {
+    width: 40px;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+}
+
+#editImageNameButton > img {
+    border: 1px solid #707071;
+    border-radius: 6pt;
+}
+
+#editIcon {
+    padding: 6px;
+}
+
+.upload {
+    border: 2px solid #707071;
+    border-radius: 3pt;
+    cursor: pointer;
+}
+
+.download {
+    background-color: #00FFF1;
+    cursor: pointer;
+    border-radius: 10pt;
+}
+
+.downloadLabel {
+    color: black;
+    position: relative;
+    font-size: 30pt;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
