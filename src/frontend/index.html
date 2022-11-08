@@ -146,6 +146,49 @@
                 <br>
                 <div class="cent"><button class="button button_rem_remove">REMOVE</button></div>
             </div>
+            <div hidden class="text_extract" id="text_extract">
+                <h2 class="title"><img class="title_pic" src="resources/retouchButton.svg" width="30" height="30">Text extract</h2> </br>
+                <br>
+                <hr>
+                <br>
+                <div id="text_size">
+                <label class="tx_size" for="tx_size">Size:</label>
+                <input type="text" id="tx_size" name="tx_size"><br><br>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <br>
+                <label class="tx_size" for="tx_size">Color:</label>
+                <div class="color-picker">
+                    <label for="colorPicker">
+                        <input type="color" name="color" id="colorPicker" value="#ffffff">
+                    </label>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <p class="output_form">Output format</p>
+                <br>
+                <div class="out_form_buttons">
+                    <button id="pdf_b" style="background-color: #d9d9d9;" class="button button_output" onclick="pdf_button(this)" onclick="">PDF</button>
+                    <button id="txt_b" style="background-color: #27272f;" class="button button_output" onclick="txt_button(this)" onclick="">TXT</button>
+                    <button id="doc_b" style="background-color: #27272f;" class="button button_output" onclick="doc_button(this)" onclick="">DOC</button>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+                <div class="cent"><button id="center" class="button button_copy_text">Copy text</button></div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+                <div class="cent"><button class="button button_extract">EXTRACT</button></div>
+            </div>
         </div>
     </div>
     <script src="app.js"></script> 
