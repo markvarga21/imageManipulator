@@ -254,3 +254,84 @@ input[type="range"]::-webkit-slider-thumb {
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
 }
+
+.imageContainer {
+    position: relative;
+    width: 30%;
+    height: 30%;
+    top: 25vh;
+}
+
+.zoomButtons {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+    z-index: 1;
+}
+
+#imagePreview {
+    z-index: -1;
+    object-fit: contain;
+    transition: width 0.2s, height 0.2s;
+}
+
+.all {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.zoomButtons > button {
+    padding: 5pt;
+    background-color: transparent;
+    border: 1px solid #707071;
+    border-radius: 10pt;
+    cursor: pointer;
+}
+
+.zoomButtons {
+    position: fixed;
+    bottom: 50px;
+    left: 650px
+}
+
+#zoomOutButton > img, #zoomInButton > img, .fullScreen > img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.fullScreen {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    height: 50px;
+    border: 1px solid #707071;
+    border-radius: 10pt;
+    color: #707071;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.fullScreen:hover {
+    color: white;
+    background-color: #707071;
+}
+
+.imageSizeLabel {
+    color: #707071;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+body {
+    background-color: #1B1B22;
+}
