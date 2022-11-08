@@ -132,3 +132,16 @@ function makeImageNameEditable() {
     imageNameLabel.setAttribute('contenteditable', 'true');
   }
 }
+
+function uploadImage() {
+  console.log('Image uploaded...');
+}
+
+function downloadImage() {
+  console.log('Image downloaded...');
+}
+
+function displayLoggedInUser() {
+  const userName = 'john';
+  alert(`Logged in as: ${userName}`);
+}
