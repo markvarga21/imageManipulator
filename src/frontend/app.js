@@ -85,3 +85,50 @@ let back_remove = button => {
      
     back_rem.removeAttribute("hidden", "hidden");
 }
+
+let image = document.querySelector('#imagePreview');
+let imageSizeLabel = document.querySelector('.imageSizeLabel');
+let fullScreenDiv = document.querySelector('.fullScreen');
+
+const defaultSize = '800px';
+
+let imageWidth = image.naturalWidth;
+let imageHeight = image.naturalHeight;
+
+fullScreenDiv.onclick = function() {
+  image.setAttribute('width', defaultSize);
+  imageSizeLabel.innerHTML = '100%';
+}
+
+function zoomIn() {
+  image.setAttribute('width', String(imageWidth + 50));
+  image.setAttribute('height', String(imageWidth + 50));
+  const percentIndex = imageSizeLabel.innerHTML.indexOf('%');
+  let prevImageSizePercentage = Number(imageSizeLabel.innerHTML.substring(0, percentIndex));
+  imageSizeLabel.innerHTML = `${String(prevImageSizePercentage + 20)}%`;
+  imageWidth += 50;
+}
+
+function zoomOut() {
+  image.setAttribute('width', String(imageWidth - 50));
+  image.setAttribute('height', String(imageWidth - 50));
+  const percentIndex = imageSizeLabel.innerHTML.indexOf('%');
+  let prevImageSizePercentage = Number(imageSizeLabel.innerHTML.substring(0, percentIndex));
+  imageSizeLabel.innerHTML = `${String(prevImageSizePercentage - 20)}%`;
+  imageWidth -= 50;
+}
+
+function goToHome() {
+  console.log('Clicked on home button!');
+}
+
+let imageNameLabel = document.querySelector('.label');
+
+function makeImageNameEditable() {
+  const editable = imageNameLabel.getAttribute('contenteditable');
+  if (editable === 'true') {
+    imageNameLabel.setAttribute('contenteditable', 'false');
+  } else {
+    imageNameLabel.setAttribute('contenteditable', 'true');
+  }
+}
