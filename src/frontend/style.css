@@ -44,7 +44,7 @@ html, body {
     color: white;
   }
 
-.photo_rt, .back_rem {
+.photo_rt, .back_rem, .text_extract {
     font-family: 'Roboto', sans-serif;
     float: right;
     height: 100vw;
@@ -79,7 +79,7 @@ html, body {
     background-color: #ffffff;
 }
 
-.button_rem_add {
+.button_rem_add, .button_copy_text {
     border: 2px solid #707071;
     border-radius: 5px;
     background-color: #27272f;
@@ -96,7 +96,7 @@ html, body {
     padding-bottom: 1vw;
 }
 
-.button_rem_remove {
+.button_rem_remove, .button_extract {
     border: 2px solid #707071;
     border-radius: 5px;
     background-color: #00fff1;
@@ -336,3 +336,69 @@ body {
     background-color: #1B1B22;
 }
 
+#tx_size{
+    background-color: #27272f;
+    width: 65px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid #707071;
+    border-radius: 7pt;
+    font-family: 'Roboto', sans-serif;
+    font-weight: light;
+    margin-left: 20px;
+    color:#ffffff;
+}
+
+#text_size {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.tx_size, .output_form {
+    color: #707071;
+}
+
+.button_output {
+    border: 2px solid #707071;
+    border-radius: 5px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    color: #707071;
+    align-items: center;
+}
+
+.out_form_buttons {
+    text-align: center;
+}
+
+[type='color'] {
+    appearance: none;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+[type='color']::-webkit-color-swatch {
+    border: none;
+}
+
+.color-picker {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #27272f;
+    width: 55px;
+    margin-left: 70px;
+}
