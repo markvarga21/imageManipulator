@@ -50,6 +50,22 @@
                     <button onclick="back_remove(this)" class="button button1" onclick=""><img src="resources/backremoveIcon.svg" width="50vw" height="50vw"></button>
                 </ul>
             </div>
+            <div class="imageContainer">
+                <img src="./resources/stock.jpg" id="imagePreview" alt='Placeholder image'/>
+                <div class="zoomButtons">
+                    <button type="button" onclick="zoomOut()" id="zoomInButton">
+                        <img src = "./resources/minusIcon.svg" alt="Minus icon"/>
+                    </button>
+                    <div class="imageSizeLabel">100%</div>
+                    <button type="button" onclick="zoomIn()" id="zoomOutButton">
+                        <img src = "./resources/plusIcon.svg" alt="Plus icon"/>
+                    </button>
+                    <div class="fullScreen">
+                        <img src = "./resources/fullScreenIcon.svg" alt="Plus icon"/>
+                        <div class="fullScreenText">Full screen</div>
+                    </div>
+                </div>
+            </div>
             <div class="photo_rt" id="photo_rt">
                 <h2 class="title"><img class="title_pic" src="resources/retouchButton.svg" width="30" height="30">Photo retouch</h2> </br>
                 <div class="contrast">
