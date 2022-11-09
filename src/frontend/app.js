@@ -115,8 +115,12 @@ function zoomIn() {
   image.setAttribute('height', String(imageWidth + 50));
   const percentIndex = imageSizeLabel.innerHTML.indexOf('%');
   let prevImageSizePercentage = Number(imageSizeLabel.innerHTML.substring(0, percentIndex));
-  imageSizeLabel.innerHTML = `${String(prevImageSizePercentage + 20)}%`;
-  imageWidth += 50;
+  if (prevImageSizePercentage <= 100){
+      imageSizeLabel.innerHTML = `${String(prevImageSizePercentage + 20)}%`;
+      imageWidth += 50; 
+  }
+  
+  
 }
 
 function zoomOut() {
@@ -124,8 +128,12 @@ function zoomOut() {
   image.setAttribute('height', String(imageWidth - 50));
   const percentIndex = imageSizeLabel.innerHTML.indexOf('%');
   let prevImageSizePercentage = Number(imageSizeLabel.innerHTML.substring(0, percentIndex));
-  imageSizeLabel.innerHTML = `${String(prevImageSizePercentage - 20)}%`;
-  imageWidth -= 50;
+  if (prevImageSizePercentage >= 40){
+      imageSizeLabel.innerHTML = `${String(prevImageSizePercentage - 20)}%`;
+      imageWidth -= 50;
+      
+      }
+  
 }
 
 function goToHome() {
