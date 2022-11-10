@@ -117,7 +117,7 @@ function zoomIn() {
   let prevImageSizePercentage = Number(imageSizeLabel.innerHTML.substring(0, percentIndex));
   if (prevImageSizePercentage <= 100){
       imageSizeLabel.innerHTML = `${String(prevImageSizePercentage + 20)}%`;
-      imageWidth += 50; 
+      imageWidth += 50;
   }
   
   
@@ -131,9 +131,7 @@ function zoomOut() {
   if (prevImageSizePercentage >= 40){
       imageSizeLabel.innerHTML = `${String(prevImageSizePercentage - 20)}%`;
       imageWidth -= 50;
-      
-      }
-  
+}
 }
 
 function goToHome() {
