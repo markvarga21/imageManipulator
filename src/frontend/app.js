@@ -115,7 +115,7 @@ function zoomIn() {
   image.setAttribute('height', String(imageWidth + 50));
   const percentIndex = imageSizeLabel.innerHTML.indexOf('%');
   let prevImageSizePercentage = Number(imageSizeLabel.innerHTML.substring(0, percentIndex));
-  if (prevImageSizePercentage <= 280){
+  if (prevImageSizePercentage <= 100){
       imageSizeLabel.innerHTML = `${String(prevImageSizePercentage + 20)}%`;
       imageWidth += 50;
   }
