@@ -228,7 +228,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 #editImageNameButton > img {
     border: 1px solid #707071;
-    border-radius: 6pt;
+    border-radius: 7pt;
 }
 
 #editIcon {
@@ -259,7 +259,7 @@ input[type="range"]::-webkit-slider-thumb {
     position: relative;
     width: 30%;
     height: 30%;
-    top: 25vh;
+    top: 2vh;
 }
 
 .zoomButtons {
