@@ -105,10 +105,11 @@ const defaultSize = '800px';
 let imageWidth = image.naturalWidth;
 let imageHeight = image.naturalHeight;
 
-fullScreenDiv.onclick = function() {
-  image.setAttribute('width', defaultSize);
-  imageSizeLabel.innerHTML = '100%';
+function fullScreen() {
+    open("stock.jpg");
 }
+
+
 
 function zoomIn() {
   image.setAttribute('width', String(imageWidth + 50));
