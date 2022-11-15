@@ -22,12 +22,15 @@
                     <img src="resources/editIcon.svg" alt="Edit image icon" id="editIcon" />
                 </button>
             </div>
-            <div class="upload">
-                <button onclick="uploadImage()" id="uploadImageButton">
-                    <img src="resources/uploadButton.svg" alt="Upload image icon" id="uploadIcon" />
-                </button>
-                <div class="uploadLabel">Upload</div>
-            </div>
+            
+                <input type="file" accept="image/*" id="file">
+                <label for="file">
+                    <i class="material-icons">
+                        add_photo_alternative
+                    </i>
+                    Upload
+                </label>
+            
             <div class="download">
                 <button onclick="downloadImage()" id="downloadImageButton">
                     <img src="resources/downloadIcon.svg" alt="Download image icon" id="downloadIcon" />

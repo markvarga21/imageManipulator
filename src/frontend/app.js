@@ -135,7 +135,7 @@ function zoomOut() {
 }
 
 function goToHome() {
-  console.log('Clicked on home button!');
+  open("login.html");
 }
 
 let imageNameLabel = document.querySelector('.label');
