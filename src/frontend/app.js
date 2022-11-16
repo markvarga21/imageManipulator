@@ -239,7 +239,7 @@ fetch("localhost:5000/getPdfFileFromImage", requestOptions)
   .catch(error => console.log('error', error));
 
 
-  //Get txt from image
+//Get txt from image
 
   var formdata = new FormData();
 formdata.append(image, fileInput.files[0], "text_img2.JPG");
@@ -252,6 +252,26 @@ var requestOptions = {
 };
 
 fetch("localhost:5000/getTxtFileFromImage", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+//DOC file
+
+  var formdata = new FormData();
+formdata.append(image, fileInput.files[0], "doc_img.JPG");
+formdata.append("userName", loginName);
+formdata.append("size", tx_size);
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("localhost:5000/getDocFileFromImage", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
