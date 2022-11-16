@@ -1,3 +1,6 @@
+let tx_size = document.querySelector('#tx_size');
+let loginName = document.querySelector('#loginName');
+
 // Update the contrast slider value
 let cont_slider = document.getElementById("contrast-slider");
 let cont_output = document.getElementById("contrast-value");
@@ -197,6 +200,8 @@ let doc_button = button => {
   document.getElementById("doc_b").style.background='#d9d9d9';
 }
 
+//Text from image
+
 var formdata = new FormData();
 formdata.append("image", fileInput.files[0], "text_img.png");
 
@@ -207,6 +212,28 @@ var requestOptions = {
 };
 
 fetch("localhost:5000/getTextFromImage", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+//PDF from image
+
+  var formdata = new FormData();
+formdata.append("image", fileInput.files[0], "pdf_img.png");
+formdata.append("size", "tx_size");
+formdata.append("userName", "loginName");
+formdata.append("r", "255");
+formdata.append("g", "100");
+formdata.append("b", "100");
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("localhost:5000/getPdfFileFromImage", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
