@@ -203,7 +203,7 @@ let doc_button = button => {
 //Text from image
 
 var formdata = new FormData();
-formdata.append("image", fileInput.files[0], "text_img.png");
+formdata.append(image, fileInput.files[0], "text_img.png");
 
 var requestOptions = {
   method: 'GET',
@@ -220,9 +220,9 @@ fetch("localhost:5000/getTextFromImage", requestOptions)
 //PDF from image
 
   var formdata = new FormData();
-formdata.append("image", fileInput.files[0], "pdf_img.png");
-formdata.append("size", "tx_size");
-formdata.append("userName", "loginName");
+formdata.append(image, fileInput.files[0], "pdf_img.png");
+formdata.append("size", tx_size);
+formdata.append("userName", loginName);
 formdata.append("r", "255");
 formdata.append("g", "100");
 formdata.append("b", "100");
@@ -234,6 +234,24 @@ var requestOptions = {
 };
 
 fetch("localhost:5000/getPdfFileFromImage", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+  //Get txt from image
+
+  var formdata = new FormData();
+formdata.append(image, fileInput.files[0], "text_img2.JPG");
+formdata.append("userName", loginName);
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("localhost:5000/getTxtFileFromImage", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
