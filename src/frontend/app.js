@@ -196,3 +196,17 @@ let doc_button = button => {
   document.getElementById("txt_b").style.background='#27272f';
   document.getElementById("doc_b").style.background='#d9d9d9';
 }
+
+var formdata = new FormData();
+formdata.append("image", fileInput.files[0], "text_img.png");
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("localhost:5000/getTextFromImage", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
