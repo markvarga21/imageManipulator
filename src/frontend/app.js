@@ -1,3 +1,4 @@
+let label = document.getElementsByClassName("label");
 let tx_size = document.querySelector('#tx_size');
 let loginName = document.querySelector('#loginName');
 
@@ -154,7 +155,7 @@ function makeImageNameEditable() {
 
 
 function downloadImage() {
-  alert("Go to the picture with your mouse, click right, and click \"Save image as\" ")
+  alert("Go to the picture with your mouse, click right, and click \"Save image as\" ");
 }
 
 function displayLoggedInUser() {
@@ -200,7 +201,7 @@ let doc_button = button => {
 //Text from image
 
 var formdata = new FormData();
-formdata.append(image, fileInput.files[0], "text_img.png");
+formdata.append(image, fileInput.files[0], label);
 
 var requestOptions = {
   method: 'GET',
@@ -217,7 +218,7 @@ fetch("localhost:5000/getTextFromImage", requestOptions)
 //PDF from image
 
   var formdata = new FormData();
-formdata.append(image, fileInput.files[0], "pdf_img.png");
+formdata.append(image, fileInput.files[0], label);
 formdata.append("size", tx_size);
 formdata.append("userName", loginName);
 formdata.append("r", "255");
@@ -239,7 +240,7 @@ fetch("localhost:5000/getPdfFileFromImage", requestOptions)
 //Get txt from image
 
   var formdata = new FormData();
-formdata.append(image, fileInput.files[0], "text_img2.JPG");
+formdata.append(image, fileInput.files[0], label);
 formdata.append("userName", loginName);
 
 var requestOptions = {
@@ -258,7 +259,7 @@ fetch("localhost:5000/getTxtFileFromImage", requestOptions)
 //DOC file
 
   var formdata = new FormData();
-formdata.append(image, fileInput.files[0], "doc_img.JPG");
+formdata.append(image, fileInput.files[0], label);
 formdata.append("userName", loginName);
 formdata.append("size", tx_size);
 
