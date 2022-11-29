@@ -1,6 +1,20 @@
 let label = document.getElementsByClassName("label");
 let tx_size = document.querySelector('#tx_size');
 let loginName = document.querySelector('#loginName');
+let button = document.querySelector('#button');
+
+const imageInput = document.querySelector('#file');
+var uploadedImage = "";
+
+/* imageInput.addEventListener("change", function(){
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+      uploadedImage = reader.result;
+      document.querySelector('#imagePreview').style.backgroundImage = url(${uploadedImage});
+    });
+    reader.readAsDataURL(this.files[0])
+
+})*/
 
 // Update the contrast slider value
 let cont_slider = document.getElementById("contrast-slider");
@@ -17,7 +31,7 @@ let bright_output = document.getElementById("brightness-value");
 bright_output.innerHTML = bright_slider.value;
 
 bright_slider.oninput = function() {
-  bright_output.innerHTML = this.value;
+   bright_output.innerHTML = this.value;
 }
 
 // Update the sharpness slider value
@@ -109,9 +123,12 @@ const defaultSize = '800px';
 let imageWidth = image.naturalWidth;
 let imageHeight = image.naturalHeight;
 
+function loginButton(){
+    open("index.html");
+}
 
 function fullScreen() {
-    open("stock.jpg");
+    open(image.src);
 }
 
 function zoomIn() {
@@ -142,6 +159,10 @@ function goToHome() {
   open("login.html");
 }
 
+/* function source(){
+  return imageInput.value;
+} */
+
 let imageNameLabel = document.querySelector('.label');
 
 function makeImageNameEditable() {
@@ -153,13 +174,12 @@ function makeImageNameEditable() {
   }
 }
 
-
 function downloadImage() {
   alert("Go to the picture with your mouse, click right, and click \"Save image as\" ");
 }
 
 function displayLoggedInUser() {
-  const userName = 'john';
+  const userName = "john";
   alert(`Logged in as: ${userName}`);
 }
 
@@ -217,7 +237,7 @@ fetch("localhost:5000/getTextFromImage", requestOptions)
 
 //PDF from image
 
-  var formdata = new FormData();
+var formdata = new FormData();
 formdata.append(image, fileInput.files[0], label);
 formdata.append("size", tx_size);
 formdata.append("userName", loginName);
