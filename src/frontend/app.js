@@ -152,12 +152,9 @@ function makeImageNameEditable() {
   }
 }
 
-function uploadImage() {
-  console.log('Image uploaded...');
-}
 
 function downloadImage() {
-  console.log('Image downloaded...');
+  alert("Go to the picture with your mouse, click right, and click \"Save image as\" ")
 }
 
 function displayLoggedInUser() {
