@@ -160,7 +160,7 @@ function goToHome() {
 }
 
 /* function source(){
-  return imageInput.value;
+  return imageInput;
 } */
 
 let imageNameLabel = document.querySelector('.label');
