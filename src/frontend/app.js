@@ -1,5 +1,20 @@
+let label = document.getElementsByClassName("label");
 let tx_size = document.querySelector('#tx_size');
 let loginName = document.querySelector('#loginName');
+let button = document.querySelector('#button');
+
+const imageInput = document.querySelector('#file');
+var uploadedImage = "";
+
+/* imageInput.addEventListener("change", function(){
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+      uploadedImage = reader.result;
+      document.querySelector('#imagePreview').style.backgroundImage = url(${uploadedImage});
+    });
+    reader.readAsDataURL(this.files[0])
+
+})*/
 
 // Update the contrast slider value
 let cont_slider = document.getElementById("contrast-slider");
@@ -110,7 +125,7 @@ let imageHeight = image.naturalHeight;
 
 
 function fullScreen() {
-    open("stock.jpg");
+  open(image.src);
 }
 
 function zoomIn() {
@@ -141,6 +156,10 @@ function goToHome() {
   open("login.html");
 }
 
+/* function source(){
+  return imageInput;
+} */
+
 let imageNameLabel = document.querySelector('.label');
 
 function makeImageNameEditable() {
@@ -159,6 +178,7 @@ function downloadImage() {
 
 function displayLoggedInUser() {
   const userName = 'john';
+  //username = loginName;
   alert(`Logged in as: ${userName}`);
 }
 
