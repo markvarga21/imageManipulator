@@ -123,6 +123,10 @@ const defaultSize = '800px';
 let imageWidth = image.naturalWidth;
 let imageHeight = image.naturalHeight;
 
+function loginButton(){
+  open("index.html");
+}
+
 
 function fullScreen() {
   open(image.src);
