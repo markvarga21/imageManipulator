@@ -22,13 +22,10 @@
                     <img src="resources/editIcon.svg" alt="Edit image icon" id="editIcon" />
                 </button>
             </div>
-            <input type="file" accept="image/*" id="file">
-            <label for="file">
-                <i class="material-icons">
-                    add_photo_alternative
-                </i>
-                    Upload
-            </label>
+            <div class="upload">
+                <label for="file">Upload</label>
+                <input type="file" accept="image/*" id="file" onchange="showImage(event);">
+            </div>
             <div class="download">
                 <button onclick="downloadImage()" id="downloadImageButton">
                     <img src="resources/downloadIcon.svg" alt="Download image icon" id="downloadIcon" />
@@ -56,7 +53,7 @@
                 </ul>
             </div>
             <div class="imageContainer">
-                <img src="./resources/stock.jpg" id="imagePreview" alt='Placeholder image'/>
+                <img src="" id="imagePreview" alt='Placeholder image'/> 
                 <div class="zoomButtons">
                     <button type="button" onclick="zoomOut()" id="zoomInButton">
                         <img src = "./resources/minusIcon.svg" alt="Minus icon"/>
