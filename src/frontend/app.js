@@ -4,6 +4,7 @@ let loginName = document.querySelector('#loginName');
 // Update the contrast slider value
 let cont_slider = document.getElementById("contrast-slider");
 let cont_output = document.getElementById("contrast-value");
+let imageSizeLabel = document.querySelector('.imageSizeLabel');
 cont_output.innerHTML = cont_slider.value;
 
 cont_slider.oninput = function() {
@@ -100,7 +101,16 @@ let back_remove = button => {
 }
 
 let image = document.querySelector('#imagePreview');
-let imageSizeLabel = document.querySelector('.imageSizeLabel');
+
+function showImage(event){
+  if(event.target.files.length > 0){
+    var src = URL.createObjectURL(event.target.files[0]);
+    image.src = src;
+    image.style.display = "block";
+  }
+    
+}
+
 let fullScreenDiv = document.querySelector('.fullScreen');
 
 const defaultSize = '800px';
@@ -110,7 +120,7 @@ let imageHeight = image.naturalHeight;
 
 
 function fullScreen() {
-    open("stock.jpg");
+    open(image.src);
 }
 
 function zoomIn() {
@@ -140,6 +150,8 @@ function zoomOut() {
 function goToHome() {
   open("login.html");
 }
+
+
 
 let imageNameLabel = document.querySelector('.label');
 
