@@ -54,4 +54,8 @@
 | 51. | Menteni akarom a képet | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Lementi a képet | Ha rákattintok jobb gomb után, hogy kép mentése másként valóban lementi a képet | &#10003; |
 | 52. | A Login a képszerkesztő oldalra visz-e? | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Átvisz az index.html-re | Valóban átvisz | &#10003; |
 | 53. | Mit csinál ha a profilikonra megyek? | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Bejelentkezéssel kapcsolatos információt ad | Valóban ez történik alert formájában | &#10003; |
-  
+| 54. | Mit csinál ha a profilikonra megyek? | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Bejelentkezéssel kapcsolatos információt ad | Valóban ez történik alert formájában | &#10003; |
+| 55. | Egyszerre 2 képet akarok bevinni, mert lenyomom kiválasztás alatt a controllt | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fog megjeélenni 2 kép | Nem is tudom megpróbálni, mert mindig az utolsó kép marad kijelölve | &#10003; |
+| 56. | Egyszerre 2 képet akarok bevinni, mert kijelölöm őket | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fog megjeélenni 2 kép | Nem engedi a kijelölést | &#10003; |
+| 57. | EKönyvtárat akarok bevinni | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fogom tudni, mert mindig be fog vinni belülre | Ez is történik | &#10003; |
+
