@@ -62,4 +62,6 @@
 | 58. | Behúzással akarok képet bevinni | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Be fogja tenni középre | E helyett megnyitja másik oldalon | &#10003; |
 | 59. | Behúzással akarok könyvtárat bevinni | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fog történni semmi | E helyett megnyitja másik oldalon az ararto.inf.unideb.hu mintájára | &#10003; |
 | 60. | A "sample image" helyett 1 nagyon hosszú szöveget írok be | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Széttolja az egész weboldalt a szöveg | Ez is történik | &#10003; |
+| 61. | A "sample image" helyett semmit se írok be | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Ígymarad | Valóban, nem lesz semmi sem | &#10003; |
+| 62. | A ceruzára való kattintás nélkül próbálom megkísérelni a szerkesztést | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fogja engedni | Nem is engedi | &#10003; |
 
