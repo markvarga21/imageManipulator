@@ -50,20 +50,9 @@
 | 47. | Nem képet választok ki hanem doc fájlt | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fogja betölteni  | Nem tölti be | &#10003; |
 | 48. | Bal oldalon a 2. ikont választom ki | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Be fogja hozni a kívánt menüt  | Be is hozza | &#10003; |
 | 49. | Bal oldalon az alsó ikont választom ki | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Be fogja hozni a kívánt menüt  | Be is hozza | &#10003; |
+| 50. | Jobb gombbal a képre kattintok | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Behozza a képpel kapcsolatos opciókat  | Behozza | &#10003; |
+| 51. | Menteni akarom a képet | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Lementi a képet | Ha rákattintok jobb gomb után, hogy kép mentése másként valóban lementi a képet | &#10003; |
   
-
- 
-
-50.
-Jobb gombbal a képre kattintok 
-Bódi András
-Windows 10
-Intel Core i5, 16GB DDR4 RAM, 1650ti
-Google Chrome 
-2022.12.04
-Behozza a képpel kapcsolatos opciókat 
-Behozza 
-✓ 
 
 51.
 Menteni akarom a képet
