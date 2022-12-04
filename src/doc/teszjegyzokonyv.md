@@ -44,29 +44,12 @@
 | 41. | Download gomb | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Felhoz 1 alertet, hogy mentsem le másként |  Behozza az alertet | &#10003; |
 | 42. | Full screen gomb | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Megnyitja teljes képernyőn |  Megnyitja teljes képernyőn | &#10003; |
 | 43. | Fájl kiválasztás | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Azt a képet fogja betölteni, amire kattintok |  Azt is tölti be | &#10003; |
+| 44. | Nem képet választok ki hanem txt-t | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fogja betölteni  | Nem tölti be | &#10003; |
+| 45. | Nem képet választok ki exel táblázatot | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fogja betölteni  | Nem tölti be | &#10003; |
 
 
-44. 
-Nem képet választok ki hanem txt-t
-Bódi András
-Windows 10
-Intel Core i5, 16GB DDR4 RAM, 1650ti
-Google Chrome 
-2022.12.04
-Nem fogja betölteni 
-Nem tölti be
-✓ 
 
-45.
-Nem képet választok ki hanem txt-t
-Bódi András
-Windows 10
-Intel Core i5, 16GB DDR4 RAM, 1650ti
-Google Chrome 
-2022.12.04
-Nem fogja betölteni 
-Nem tölti be
-✓ 
+ 
 
 46.
 Nem képet választok ki hanem exel táblázatot
