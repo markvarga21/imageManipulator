@@ -52,37 +52,6 @@
 | 49. | Bal oldalon az alsó ikont választom ki | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Be fogja hozni a kívánt menüt  | Be is hozza | &#10003; |
 | 50. | Jobb gombbal a képre kattintok | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Behozza a képpel kapcsolatos opciókat  | Behozza | &#10003; |
 | 51. | Menteni akarom a képet | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Lementi a képet | Ha rákattintok jobb gomb után, hogy kép mentése másként valóban lementi a képet | &#10003; |
+| 52. | A Login a képszerkesztő oldalra visz-e? | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Átvisz az index.html-re | Valóban átvisz | &#10003; |
+| 53. | Mit csinál ha a profilikonra megyek? | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Bejelentkezéssel kapcsolatos információt ad | Valóban ez történik alert formájában | &#10003; |
   
-
-51.
-Menteni akarom a képet
-Bódi András
-Windows 10
-Intel Core i5, 16GB DDR4 RAM, 1650ti
-Google Chrome 
-2022.12.04
-Lementi a képet
-Ha rákattintok jobb gomb után, hogy kép mentése másként valóban lementi a képet 
-✓ 
-
-52.
-A Login a képszerkesztő oldalra visz-e?
-Bódi András
-Windows 10
-Intel Core i5, 16GB DDR4 RAM, 1650ti
-Google Chrome 
-2022.12.04
-Átvisz az index.html-re
-Valóban átvisz
-✓ 
-
-53.
-Mit csinál ha a profilikonra megyek?
-Bódi András
-Windows 10
-Intel Core i5, 16GB DDR4 RAM, 1650ti
-Google Chrome 
-2022.12.04
-Valamivel jelzi, hogy ki van bejelentkezve 
-Valóban jelzi 1 alerttel 
-✓
