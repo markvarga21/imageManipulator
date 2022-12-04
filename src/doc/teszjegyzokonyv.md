@@ -57,5 +57,9 @@
 | 54. | Mit csinál ha a profilikonra megyek? | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Bejelentkezéssel kapcsolatos információt ad | Valóban ez történik alert formájában | &#10003; |
 | 55. | Egyszerre 2 képet akarok bevinni, mert lenyomom kiválasztás alatt a controllt | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fog megjeélenni 2 kép | Nem is tudom megpróbálni, mert mindig az utolsó kép marad kijelölve | &#10003; |
 | 56. | Egyszerre 2 képet akarok bevinni, mert kijelölöm őket | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fog megjeélenni 2 kép | Nem engedi a kijelölést | &#10003; |
-| 57. | EKönyvtárat akarok bevinni | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fogom tudni, mert mindig be fog vinni belülre | Ez is történik | &#10003; |
+| 57. | Könyvtárat akarok bevinni | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fogom tudni, mert mindig be fog vinni belülre | Ez is történik | &#10003; |
+| 57. | Könyvtárat akarok bevinni | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fogom tudni, mert mindig be fog vinni belülre | Ez is történik | &#10003; |
+| 58. | Behúzással akarok képet bevinni | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Be fogja tenni középre | E helyett megnyitja másik oldalon | &#10003; |
+| 59. | Behúzással akarok könyvtárat bevinni | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fog történni semmi | E helyett megnyitja másik oldalon az ararto.inf.unideb.hu mintájára | &#10003; |
+| 60. | A "sample image" helyett 1 nagyon hosszú szöveget írok be | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Széttolja az egész weboldalt a szöveg | Ez is történik | &#10003; |
 
