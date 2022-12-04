@@ -41,3 +41,117 @@
 | 38. | Text extract slider | Cserés Gábor | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1050ti | Google Chrome | 2022.11.27 | A text extract sliderek mozognak e |  A slider-ek mozognak | &#10003; |
 | 39. | Text extract slider érték | Cserés Gábor | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1050ti | Google Chrome | 2022.11.27 | A text extract slider-ek kiírják értékeiket |  Igen kiírják | &#10003; |
 | 40. | Home gomb | Cserés Gábor | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1050ti | Google Chrome | 2022.11.27 | A home gomb a login részre dob e |  A gomb behozza a login részt | &#10003; |
+| 41. | Download gomb | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Felhoz 1 alertet, hogy mentsem le másként |  Behozza az alertet | &#10003; |
+| 42. | Full screen gomb | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Megnyitja teljes képernyőn |  Megnyitja teljes képernyőn | &#10003; |
+| 43. | Fájl kiválasztás | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Azt a képet fogja betölteni, amire kattintok |  Azt is tölti be | &#10003; |
+
+
+44. 
+Nem képet választok ki hanem txt-t
+Bódi András
+Windows 10
+Intel Core i5, 16GB DDR4 RAM, 1650ti
+Google Chrome 
+2022.12.04
+Nem fogja betölteni 
+Nem tölti be
+✓ 
+
+45.
+Nem képet választok ki hanem txt-t
+Bódi András
+Windows 10
+Intel Core i5, 16GB DDR4 RAM, 1650ti
+Google Chrome 
+2022.12.04
+Nem fogja betölteni 
+Nem tölti be
+✓ 
+
+46.
+Nem képet választok ki hanem exel táblázatot
+Bódi András
+Windows 10
+Intel Core i5, 16GB DDR4 RAM, 1650ti
+Google Chrome 
+2022.12.04
+Nem fogja betölteni 
+Nem tölti be
+✓ 
+
+47.
+Nem képet választok ki hanem 1 doc fájlt 
+Bódi András
+Windows 10
+Intel Core i5, 16GB DDR4 RAM, 1650ti
+Google Chrome 
+2022.12.04
+Nem fogja betölteni 
+Nem tölti be
+✓ 
+
+48.
+Bal oldalon a 2. ikont választom ki
+Bódi András
+Windows 10
+Intel Core i5, 16GB DDR4 RAM, 1650ti
+Google Chrome 
+2022.12.04
+Be fogja hozni a kívánt menüt 
+Be is hozza 
+✓ 
+
+49.
+Bal oldalon az alsó ikont választom ki
+Bódi András
+Windows 10
+Intel Core i5, 16GB DDR4 RAM, 1650ti
+Google Chrome 
+2022.12.04
+Be fogja hozni a kívánt menüt 
+Be is hozza 
+✓ 
+
+50.
+Jobb gombbal a képre kattintok 
+Bódi András
+Windows 10
+Intel Core i5, 16GB DDR4 RAM, 1650ti
+Google Chrome 
+2022.12.04
+Behozza a képpel kapcsolatos opciókat 
+Behozza 
+✓ 
+
+51.
+Menteni akarom a képet
+Bódi András
+Windows 10
+Intel Core i5, 16GB DDR4 RAM, 1650ti
+Google Chrome 
+2022.12.04
+Lementi a képet
+Ha rákattintok jobb gomb után, hogy kép mentése másként valóban lementi a képet 
+✓ 
+
+52.
+A Login a képszerkesztő oldalra visz-e?
+Bódi András
+Windows 10
+Intel Core i5, 16GB DDR4 RAM, 1650ti
+Google Chrome 
+2022.12.04
+Átvisz az index.html-re
+Valóban átvisz
+✓ 
+
+53.
+Mit csinál ha a profilikonra megyek?
+Bódi András
+Windows 10
+Intel Core i5, 16GB DDR4 RAM, 1650ti
+Google Chrome 
+2022.12.04
+Valamivel jelzi, hogy ki van bejelentkezve 
+Valóban jelzi 1 alerttel 
+✓
