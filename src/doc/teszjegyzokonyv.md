@@ -48,29 +48,11 @@
 | 45. | Nem képet választok ki exel táblázatot | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fogja betölteni  | Nem tölti be | &#10003; |
 | 46. | Nem képet választok ki hanem videót | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fogja betölteni  | Nem tölti be | &#10003; | 
 | 47. | Nem képet választok ki hanem doc fájlt | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Nem fogja betölteni  | Nem tölti be | &#10003; |
+| 48. | Bal oldalon a 2. ikont választom ki | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Be fogja hozni a kívánt menüt  | Be is hozza | &#10003; |
+| 49. | Bal oldalon az alsó ikont választom ki | Bódi András | Windows 10 | Intel Core i5, 16GB DDR4 RAM, 1650ti | Google Chrome | 2022.12.04 | Be fogja hozni a kívánt menüt  | Be is hozza | &#10003; |
+  
+
  
-
-48.
-Bal oldalon a 2. ikont választom ki
-Bódi András
-Windows 10
-Intel Core i5, 16GB DDR4 RAM, 1650ti
-Google Chrome 
-2022.12.04
-Be fogja hozni a kívánt menüt 
-Be is hozza 
-✓ 
-
-49.
-Bal oldalon az alsó ikont választom ki
-Bódi András
-Windows 10
-Intel Core i5, 16GB DDR4 RAM, 1650ti
-Google Chrome 
-2022.12.04
-Be fogja hozni a kívánt menüt 
-Be is hozza 
-✓ 
 
 50.
 Jobb gombbal a képre kattintok 
