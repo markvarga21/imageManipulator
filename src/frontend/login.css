@@ -138,7 +138,7 @@ h2
 {
 	height: 44px;
 }
-input[type="submit"], .button1
+input[type="button"], .button1
 {
 	border: none;
 	outline: none;
@@ -150,7 +150,7 @@ input[type="submit"], .button1
 	width: 100px;
 	margin-top: 10px;
 }
-input[type="submit"]:active, .button1:active
+input[type="button"]:active, .button1:active
 {
 	opacity: 0.8;
 }

@@ -284,3 +284,36 @@ fetch("localhost:5000/getDocFileFromImage", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
+
+  
+function save_pre() {
+    
+  var raw = "{\r\n    \"userName\": \""+loginName+"\",\r\n    \"name\": \"colorful\",\r\n    \"color\": "+col_slider.value+",\r\n    \"contrast\": "+cont_slider.value+",\r\n    \"blur\": "+bl_slider.value+",\r\n    \"sharpness\": "+sharp_slider.value+"\r\n}";
+
+  var requestOptions = {
+    method: 'POST',
+    body: raw,
+    redirect: 'follow'
+  };
+
+  fetch("http://127.0.0.1:5000/savePreset", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+
+};
+
+function load_pre() {
+
+  var obj;    
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+  
+  fetch("http://127.0.0.1:5000/getPresets?userName="+loginName+"", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+
+};
